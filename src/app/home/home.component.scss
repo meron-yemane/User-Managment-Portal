@@ -1,0 +1,27 @@
+.home-background {
+  background-image: url('/assets/photo-1542178036-2e5efe4d8f83.jpeg') !important;
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+}
+
+.contrast-background {
+  background: rgba(255, 255, 255, 0.5);
+  margin: auto;
+}
+
+.contrast-background-container {
+  padding-top: 200px;
+}
+
+@media (max-width: 550px) { 
+  .contrast-background {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 950px) { 
+  .contrast-background {
+    background: rgba(255, 255, 255, 0.75)
+  }
+}
