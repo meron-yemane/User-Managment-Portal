@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     component: HomeComponent
+  },
+  {
+    path: 'users',
+    loadChildren: './users/users.module#UsersModule'
   }
 ];
 
