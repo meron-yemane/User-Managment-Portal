@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "login": "mojombo",
+      "name": "Mark Delaney",
+      "id": 1,
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1?v=4"
+    },
+    {
+      "login": "defunkt",
+      "name": "Meron Yemane",
+      "id": 2,
+      "avatar_url": "https://avatars0.githubusercontent.com/u/2?v=4"
+    },
+    {
+      "login": "pjhyett",
+      "name": "Ryan Walker",
+      "id": 3,
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3?v=4"
+    },
+    {
+      "login": "wycats",
+      "name": "Million Habteab",
+      "id": 4,
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4?v=4"
+    },
+    {
+      "login": "ezmobius",
+      "name": "Bryson Tiller",
+      "id": 5,
+      "avatar_url": "https://avatars0.githubusercontent.com/u/5?v=4"
+    },
+    {
+      "login": "ivey",
+      "name": "Kevin Kurry",
+      "id": 6,
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6?v=4"
+    },
+    {
+      "login": "evanphx",
+      "name": "Devin Baxter",
+      "id": 7,
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7?v=4"
+    }
+  ]
+}
