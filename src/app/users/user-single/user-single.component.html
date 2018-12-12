@@ -1,7 +1,12 @@
-<section class="section">
+<section class="section pt-5 pb-5">
   <div class="container">  
-    <div class="card" *ngIf="user">
-      <h2>{{ user.name }}</h2>
+    <div *ngIf="user">
+      <div class="row"> 
+        <h2>{{ user.name }}</h2>
+        <button type="button" class="btn btn-primary ml-auto">Edit User</button>
+      </div>  
+      <h5>Roll(s): {{ user.roles }}</h5>
+      <h5>Email: {{ user.email }}</h5>
     </div>  
   </div>
 </section>
