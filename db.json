@@ -3,44 +3,51 @@
     {
       "login": "mojombo",
       "name": "Mark Delaney",
-      "id": 1,
-      "avatar_url": "https://avatars0.githubusercontent.com/u/1?v=4"
+      "email": "mdelaney@augmedix.com",
+      "roles": ["Admin"],
+      "id": 1
     },
     {
       "login": "defunkt",
       "name": "Meron Yemane",
-      "id": 2,
-      "avatar_url": "https://avatars0.githubusercontent.com/u/2?v=4"
+      "email": "myemane@augmedix.com",
+      "roles": ["Observer"],
+      "id": 2
     },
     {
       "login": "pjhyett",
       "name": "Ryan Walker",
-      "id": 3,
-      "avatar_url": "https://avatars0.githubusercontent.com/u/3?v=4"
+      "email": "rwalker@augmedix.com",
+      "roles": ["Creator"],
+      "id": 3
     },
     {
       "login": "wycats",
       "name": "Million Habteab",
-      "id": 4,
-      "avatar_url": "https://avatars0.githubusercontent.com/u/4?v=4"
+      "email": "mhabteab@augmedix.com",
+      "roles": ["Modifier", "Observer"],
+      "id": 4
     },
     {
       "login": "ezmobius",
       "name": "Bryson Tiller",
-      "id": 5,
-      "avatar_url": "https://avatars0.githubusercontent.com/u/5?v=4"
+      "email": "btiller@augmedix.com",
+      "roles": ["Observer"],
+      "id": 5
     },
     {
       "login": "ivey",
       "name": "Kevin Kurry",
-      "id": 6,
-      "avatar_url": "https://avatars0.githubusercontent.com/u/6?v=4"
+      "email": "kkurry@augmedix.com",
+      "roles": ["Observer"],
+      "id": 6
     },
     {
       "login": "evanphx",
       "name": "Devin Baxter",
-      "id": 7,
-      "avatar_url": "https://avatars0.githubusercontent.com/u/7?v=4"
+      "email": "dbaxter@augmedix.com",
+      "roles": ["Modifier", "Observer"],
+      "id": 7
     }
   ]
 }
