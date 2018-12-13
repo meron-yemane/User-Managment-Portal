@@ -5,49 +5,49 @@
       "name": "Mark Delaney",
       "email": "mdelaney@augmedix.com",
       "roles": ["Admin"],
-      "id": 1
+      "id": 0
     },
     {
       "login": "defunkt",
       "name": "Meron Yemane",
       "email": "myemane@augmedix.com",
       "roles": ["Observer"],
-      "id": 2
+      "id": 1
     },
     {
       "login": "pjhyett",
       "name": "Ryan Walker",
       "email": "rwalker@augmedix.com",
       "roles": ["Creator"],
-      "id": 3
+      "id": 2
     },
     {
       "login": "wycats",
       "name": "Million Habteab",
       "email": "mhabteab@augmedix.com",
       "roles": ["Modifier", "Observer"],
-      "id": 4
+      "id": 3
     },
     {
       "login": "ezmobius",
       "name": "Bryson Tiller",
       "email": "btiller@augmedix.com",
       "roles": ["Observer"],
-      "id": 5
+      "id": 4
     },
     {
       "login": "ivey",
       "name": "Kevin Kurry",
       "email": "kkurry@augmedix.com",
       "roles": ["Observer"],
-      "id": 6
+      "id": 5
     },
     {
       "login": "evanphx",
       "name": "Devin Baxter",
       "email": "dbaxter@augmedix.com",
       "roles": ["Modifier", "Observer"],
-      "id": 7
+      "id": 6
     }
   ]
 }

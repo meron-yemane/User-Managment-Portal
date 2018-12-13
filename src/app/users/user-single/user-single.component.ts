@@ -18,8 +18,8 @@ export class UserSingleComponent implements OnInit {
     this.route.params.subscribe(params => {
       const userId = params['userid'];
       this.userService
-        .getUser(userId)
-        .subscribe(user => this.user = user);
+        .getUsers()
+        .subscribe(users => this.user = users[userId]);
     });
   }
 }
