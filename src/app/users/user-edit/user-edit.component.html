@@ -1,3 +1,45 @@
-<p>
-  user-edit works!
-</p>
+<div class="container w-50 pt-4 pb-4">
+  <form>
+    <!-- name -->
+    <div class="form-group">
+      <label for="InputName">Name</label>
+      <input class="form-control" id="InputName" type="text" placeholder="{{ user.name }}">
+    </div>
+    <!-- login -->
+    <div class="form-group">
+      <label for="InputLogin">Username</label>
+      <input class="form-control" id="InputLogin" type="text" placeholder="{{ user.login }}">
+    </div>
+  
+    <!-- email -->
+    <div class="form-group">
+      <label for="InputEmail">Email Address</label>
+      <input type="email" class="form-control" id="InputEmail" placeholder="{{ user.email }}">
+    </div>
+
+    <!-- roles -->
+    <div class="form-group">
+      <label for="InputRoles">Roles</label>
+      <div id="InputRoles">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <label class="form-check-label" for="inlineCheckbox1">Admin</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <label class="form-check-label" for="inlineCheckbox2">Observer</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <label class="form-check-label" for="inlineCheckbox3">Creator</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+          <label class="form-check-label" for="inlineCheckbox4">Modifier</label>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" class="btn btn-danger float-right">Delete User</button>
+  </form>
+</div>
