@@ -9,6 +9,10 @@ import { UserService } from 'src/app/user.service';
 })
 export class UserEditComponent implements OnInit {
   user;
+  name: string;
+  login: string;
+  email: string;
+  roles;
   constructor(
     private route: ActivatedRoute,
     private userService: UserService
@@ -23,4 +27,8 @@ export class UserEditComponent implements OnInit {
     });
   }
 
+  processUserEditForm() {
+    const allInfo = `My name is ${this.name}. My email is ${this.email}.`;
+    alert(allInfo);
+  }
 }

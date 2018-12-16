@@ -1,20 +1,22 @@
 <div class="container w-50 pt-4 pb-4">
-  <form>
+  <form (ngSubmit)="processUserEditForm()">
+
     <!-- name -->
     <div class="form-group">
       <label for="InputName">Name</label>
-      <input class="form-control" id="InputName" type="text" value="{{ user.name }}">
+      <input class="form-control" id="InputName" type="text" value="{{ user.name }}" name="name" [(ngModel)]="name">
     </div>
+
     <!-- login -->
     <div class="form-group">
       <label for="InputLogin">Username</label>
-      <input class="form-control" id="InputLogin" type="text" value="{{ user.login }}">
+      <input class="form-control" id="InputLogin" type="text" value="{{ user.login }}" name="login" [(ngModel)]="login">
     </div>
-  
-    <!-- email -->
+
+      <!-- email -->
     <div class="form-group">
       <label for="InputEmail">Email Address</label>
-      <input type="email" class="form-control" id="InputEmail" value="{{ user.email }}">
+      <input type="email" class="form-control" id="InputEmail" value="{{ user.email }}" name="email" [(ngModel)]="email">
     </div>
 
     <!-- roles -->
