@@ -11,16 +11,16 @@ const routes: Routes = [
     component: UserListComponent
   },
   {
+    path: 'create',
+    component: UserCreateComponent
+  },
+  {
     path: ':userid',
     component: UserSingleComponent
   },
   {
     path: ':userid/edit',
     component: UserEditComponent
-  },
-  {
-    path: 'create',
-    component: UserCreateComponent
   }
 ];
 

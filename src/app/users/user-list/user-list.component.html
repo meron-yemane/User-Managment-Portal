@@ -1,19 +1,19 @@
 <div class="container mt-4 pr-4">
-    <button routerLink="/users/create" type="button" class="btn btn-success row float-right">Create User</button>
+    <a class="ml-auto" routerLink="/users/create">
+      <button type="button" class="btn btn-success row float-right">Create User</button>
+    </a>
 </div>
-<!-- <section> -->
-  <div class="container pt-5">
-    <div class="row">
+<div class="container pt-5">
+  <div class="row">
 
-      <!-- loop over our users and give them each a card -->
-      <div class="col-6 col-sm-4" *ngFor="let user of users | async">
-        <div class="card order-secondary mb-3 shadow p-3 mb-5 bg-white rounded">
-          <div class="card-title">
-            <a routerLink="/users/{{ user.id }}">{{ user.name }}</a>
-          </div>      
+    <!-- loop over our users and give them each a card -->
+    <div class="col-6 col-sm-4" *ngFor="let user of users | async">
+      <div class="card order-secondary mb-3 shadow p-3 mb-5 bg-white rounded">
+        <div class="card-title">
+          <a routerLink="/users/{{ user.id }}">{{ user.name }}</a>
         </div>      
-      </div>
-
+      </div>      
     </div>
+
   </div>
-  <!-- </section> -->
+</div>
