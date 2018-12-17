@@ -1,35 +1,35 @@
 <div class="container w-50 pt-4 pb-4">
   <h1 class="text-center">Create User</h1>
-  <form>
+  <form (ngSubmit)="processUserCreateForm(user)">
     <div class="form-group">
-      <label for="CreateName">Name</label>
-      <input class="form-control" type="text" id="CreateName">
+      <label for="name">Name</label>
+      <input required class="form-control" type="text" name="name" id="name" [(ngModel)]="user.name" #name="ngModel">
     </div>
     <div class="form-group">
-      <label for="CreateLogin">Username</label>
-      <input class="form-control" type="text" id="CreateLogin">
+      <label for="login">Username</label>
+      <input required class="form-control" type="text" name="login" id="login" [(ngModel)]="user.login" #login="ngModel">
     </div>
     <div class="form-group">
-      <label for="CreateEmail">Email</label>
-      <input class="form-control" type="email" id="CreateEmail">
+      <label for="email">Email</label>
+      <input required class="form-control" type="email" name="email" id="email" [(ngModel)]="user.email" #email="ngModel">
     </div>
     <div class="form-group">
-      <label for="CreateRoles">Roles</label>
-      <div id="CreateRoles">
+      <label for="roles">Roles</label>
+      <div id="roles">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input (change)="onCheckBoxChange($event, 'Admin')" class="form-check-input" type="checkbox" id="inlineCheckbox1"> 
           <label class="form-check-label" for="inlineCheckbox1">Admin</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input (change)="onCheckBoxChange($event, 'Observer')" class="form-check-input" type="checkbox" id="inlineCheckbox2"> 
           <label class="form-check-label" for="inlineCheckbox2">Observer</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input (change)="onCheckBoxChange($event, 'Creator')" class="form-check-input" type="checkbox" id="inlineCheckbox3">
           <label class="form-check-label" for="inlineCheckbox3">Creator</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+          <input (change)="onCheckBoxChange($event, 'Modifier')" class="form-check-input" type="checkbox" id="inlineCheckbox4"> 
           <label class="form-check-label" for="inlineCheckbox4">Modifier</label>
         </div>
       </div>
@@ -37,3 +37,5 @@
     <button type="submit" class="btn btn-primary">Create User</button>
   </form>
 </div>
+
+Our User Model : {{ user | json }}
