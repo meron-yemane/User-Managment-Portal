@@ -10,7 +10,7 @@
     </div>
     <div class="form-group">
       <label for="login">Username</label>
-      <input minlength="3" required class="form-control" type="text" name="login" id="login" [(ngModel)]="user.login" #loginVariable="ngModel">
+      <input required class="form-control" type="text" name="login" id="login" [(ngModel)]="user.login" #loginVariable="ngModel">
       <div class="text-danger" *ngIf="loginVariable.invalid && loginVariable.dirty">
           Username is required.
       </div>
@@ -43,6 +43,6 @@
         </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Create User</button>
+    <button [disabled]="!createUserForm.valid" type="submit" class="btn btn-primary">Save</button>
   </form>
 </div>
