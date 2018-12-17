@@ -74,6 +74,13 @@
         "Observer"
       ],
       "id": 7
+    },
+    {
+      "name": null,
+      "email": null,
+      "login": null,
+      "roles": [],
+      "id": 8
     }
   ]
 }
