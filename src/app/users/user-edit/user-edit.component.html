@@ -1,42 +1,52 @@
 <div class="container w-50 pt-4 pb-4">
-  <form (ngSubmit)="processUserEditForm()">
+  <h1 class="text-center">Edit User</h1>
+  <form #editUserForm="ngForm" (ngSubmit)="processUserEditForm()">
 
     <!-- name -->
     <div class="form-group">
-      <label for="InputName">Name</label>
-      <input class="form-control" id="InputName" type="text" value="{{ user.name }}" name="name" [(ngModel)]="name">
+      <label for="name">Name</label>
+      <input minlength="3" required class="form-control" id="name" type="text" value="{{ user.name }}" name="name" [(ngModel)]="user.name" #nameVariable="ngModel">
+      <div class="text-danger" *ngIf="nameVariable.invalid && nameVariable.dirty">
+          Name is required and needs to be at least 3 characters long.
+      </div>
     </div>
 
     <!-- login -->
     <div class="form-group">
-      <label for="InputLogin">Username</label>
-      <input class="form-control" id="InputLogin" type="text" value="{{ user.login }}" name="login" [(ngModel)]="login">
+      <label for="login">Username</label>
+      <input required class="form-control" id="login" type="text" value="{{ user.login }}" name="login" [(ngModel)]="login" #loginVariable="ngModel">
+      <div class="text-danger" *ngIf="loginVariable.invalid && loginVariable.dirty">
+          Username is required.
+      </div>
     </div>
 
     <!-- email -->
     <div class="form-group">
-      <label for="InputEmail">Email Address</label>
-      <input type="email" class="form-control" id="InputEmail" value="{{ user.email }}" name="email" [(ngModel)]="email">
+      <label for="email">Email</label>
+      <input required type="email" class="form-control" id="email" value="{{ user.email }}" name="email" [(ngModel)]="email" #emailVariable="ngModel">
+      <div class="text-danger" *ngIf="emailVariable.invalid && emailVariable.dirty">
+          Needs to be a valid email.
+      </div>
     </div>
 
     <!-- roles -->
     <div class="form-group">
-      <label for="InputRoles">Roles</label>
-      <div id="InputRoles">
+      <label for="roles">Roles</label>
+      <div id="roles">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input (change)="onCheckBoxChange($event, 'Admin')" class="form-check-input" type="checkbox" id="inlineCheckbox1"> 
           <label class="form-check-label" for="inlineCheckbox1">Admin</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input (change)="onCheckBoxChange($event, 'Observer')" class="form-check-input" type="checkbox" id="inlineCheckbox2"> 
           <label class="form-check-label" for="inlineCheckbox2">Observer</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input (change)="onCheckBoxChange($event, 'Creator')" class="form-check-input" type="checkbox" id="inlineCheckbox3">
           <label class="form-check-label" for="inlineCheckbox3">Creator</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+          <input (change)="onCheckBoxChange($event, 'Modifier')" class="form-check-input" type="checkbox" id="inlineCheckbox4"> 
           <label class="form-check-label" for="inlineCheckbox4">Modifier</label>
         </div>
       </div>
@@ -47,7 +57,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete this user from the database?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete this user?</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -61,3 +71,5 @@
     </div>
   </form>
 </div>
+
+generated form value: {{ user | json }}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/user.service';
+import { User } from 'models/user';
 
 @Component({
   selector: 'app-user-edit',
@@ -8,11 +9,12 @@ import { UserService } from 'src/app/user.service';
   styleUrls: ['./user-edit.component.scss']
 })
 export class UserEditComponent implements OnInit {
-  user;
-  name: string;
-  login: string;
-  email: string;
-  roles;
+  user: User = {
+    name: null,
+    email: null,
+    login: null,
+    roles: []
+  };
   constructor(
     private route: ActivatedRoute,
     private userService: UserService
@@ -27,8 +29,16 @@ export class UserEditComponent implements OnInit {
     });
   }
 
+  onCheckBoxChange(event, role) {
+    if (this.user.roles.indexOf(role) > -1) {
+      this.user.roles.splice(this.user.roles.indexOf(role), 1);
+    } else {
+      this.user.roles.push(role);
+    }
+  }
+
   processUserEditForm() {
-    const allInfo = `My name is ${this.name}. My email is ${this.email}.`;
+    const allInfo = `My name is ${this.user.name}. My email is ${this.user.email}.`;
     alert(allInfo);
   }
 }
