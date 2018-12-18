@@ -34,19 +34,27 @@
       <label for="roles">Roles</label>
       <div id="roles">
         <div class="form-check form-check-inline">
-          <input (change)="onCheckBoxChange($event, 'Admin')" class="form-check-input" type="checkbox" id="inlineCheckbox1"> 
+          <input (change)="onCheckBoxChange($event, 'Admin')" 
+          class="form-check-input" [checked]="user.roles.indexOf('Admin') > -1 ? true : false" 
+          type="checkbox" id="inlineCheckbox1"> 
           <label class="form-check-label" for="inlineCheckbox1">Admin</label>
         </div>
         <div class="form-check form-check-inline">
-          <input (change)="onCheckBoxChange($event, 'Observer')" class="form-check-input" type="checkbox" id="inlineCheckbox2"> 
+          <input (change)="onCheckBoxChange($event, 'Observer')" 
+          class="form-check-input" [checked]="user.roles.indexOf('Observer') > -1 ? true : false" 
+          type="checkbox" id="inlineCheckbox2"> 
           <label class="form-check-label" for="inlineCheckbox2">Observer</label>
         </div>
         <div class="form-check form-check-inline">
-          <input (change)="onCheckBoxChange($event, 'Creator')" class="form-check-input" type="checkbox" id="inlineCheckbox3">
+          <input (change)="onCheckBoxChange($event, 'Creator')" 
+          class="form-check-input" [checked]="user.roles.indexOf('Creator') > -1 ? true : false" 
+          type="checkbox" id="inlineCheckbox3">
           <label class="form-check-label" for="inlineCheckbox3">Creator</label>
         </div>
         <div class="form-check form-check-inline">
-          <input (change)="onCheckBoxChange($event, 'Modifier')" class="form-check-input" type="checkbox" id="inlineCheckbox4"> 
+          <input (change)="onCheckBoxChange($event, 'Modifier')" 
+          class="form-check-input" [checked]="user.roles.indexOf('Modifier') > -1 ? true : false"
+          type="checkbox" id="inlineCheckbox4"> 
           <label class="form-check-label" for="inlineCheckbox4">Modifier</label>
         </div>
       </div>
