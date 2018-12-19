@@ -26,23 +26,30 @@
       <label for="roles">Roles</label>
       <div id="roles">
         <div class="form-check form-check-inline">
-          <input (change)="onCheckBoxChange($event, 'Admin')" class="form-check-input" type="checkbox" id="inlineCheckbox1"> 
+          <input (change)="onCheckBoxChange($event, 'Admin')" class="form-check-input" 
+          type="checkbox" id="inlineCheckbox1"> 
           <label class="form-check-label" for="inlineCheckbox1">Admin</label>
         </div>
         <div class="form-check form-check-inline">
-          <input (change)="onCheckBoxChange($event, 'Observer')" class="form-check-input" type="checkbox" id="inlineCheckbox2"> 
+          <input (change)="onCheckBoxChange($event, 'Observer')" class="form-check-input"
+          type="checkbox" id="inlineCheckbox2"> 
           <label class="form-check-label" for="inlineCheckbox2">Observer</label>
         </div>
         <div class="form-check form-check-inline">
-          <input (change)="onCheckBoxChange($event, 'Creator')" class="form-check-input" type="checkbox" id="inlineCheckbox3">
+          <input (change)="onCheckBoxChange($event, 'Creator')" class="form-check-input" 
+          type="checkbox" id="inlineCheckbox3">
           <label class="form-check-label" for="inlineCheckbox3">Creator</label>
         </div>
         <div class="form-check form-check-inline">
-          <input (change)="onCheckBoxChange($event, 'Modifier')" class="form-check-input" type="checkbox" id="inlineCheckbox4"> 
+          <input (change)="onCheckBoxChange($event, 'Modifier')" class="form-check-input" 
+          type="checkbox" id="inlineCheckbox4"> 
           <label class="form-check-label" for="inlineCheckbox4">Modifier</label>
         </div>
       </div>
+      <div class="text-danger" *ngIf="rolesError">
+          At least one role must be selected.
+      </div>
     </div>
-    <button [disabled]="!createUserForm.valid" type="submit" class="btn btn-primary">Save</button>
+    <button [disabled]="rolesError || !createUserForm.valid" type="submit" class="btn btn-primary">Save</button>
   </form>
 </div>

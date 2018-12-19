@@ -14,17 +14,22 @@ export class UserCreateComponent implements OnInit {
     login: null,
     roles: []
   };
+  rolesError: Boolean = true;
+  rolesTouched: Boolean = false;
   constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
-
   onCheckBoxChange(event, role) {
+    console.log(this.rolesTouched);
+    this.rolesTouched = true;
+    console.log(this.rolesTouched);
     if (this.user.roles.indexOf(role) > -1) {
       this.user.roles.splice(this.user.roles.indexOf(role), 1);
     } else {
       this.user.roles.push(role);
     }
+    this.rolesError = this.user.roles.length > 0 ? false : true;
   }
 
   processUserCreateForm() {
