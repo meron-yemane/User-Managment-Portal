@@ -15,6 +15,7 @@ export class UserEditComponent implements OnInit {
     login: null,
     roles: []
   };
+  rolesError: Boolean = false;
   constructor(
     private route: ActivatedRoute,
     private userService: UserService
@@ -35,6 +36,7 @@ export class UserEditComponent implements OnInit {
     } else {
       this.user.roles.push(role);
     }
+    this.rolesError = this.user.roles.length > 0 ? false : true;
   }
 
   processUserEditForm() {

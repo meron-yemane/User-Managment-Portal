@@ -14,7 +14,7 @@
     <!-- login -->
     <div class="form-group">
       <label for="login">Username</label>
-      <input required class="form-control" id="login" type="text" value="{{ user.login }}" name="login" [(ngModel)]="login" #loginVariable="ngModel">
+      <input required class="form-control" id="login" type="text" value="{{ user.login }}" name="login" [(ngModel)]="user.login" #loginVariable="ngModel">
       <div class="text-danger" *ngIf="loginVariable.invalid && loginVariable.dirty">
           Username is required.
       </div>
@@ -23,7 +23,7 @@
     <!-- email -->
     <div class="form-group">
       <label for="email">Email</label>
-      <input required type="email" class="form-control" id="email" value="{{ user.email }}" name="email" [(ngModel)]="email" #emailVariable="ngModel">
+      <input required type="email" class="form-control" id="email" value="{{ user.email }}" name="email" [(ngModel)]="user.email" #emailVariable="ngModel">
       <div class="text-danger" *ngIf="emailVariable.invalid && emailVariable.dirty">
           Needs to be a valid email.
       </div>
@@ -31,35 +31,38 @@
 
     <!-- roles -->
     <div class="form-group">
-      <label for="roles">Roles</label>
-      <div id="roles">
+      <label for="rolesLabel">Roles</label>
+      <div id="rolesLabel" class="form-control">
         <div class="form-check form-check-inline">
-          <input (change)="onCheckBoxChange($event, 'Admin')" 
+          <input required (change)="onCheckBoxChange($event, 'Admin')" name="roles" 
           class="form-check-input" [checked]="user.roles.indexOf('Admin') > -1 ? true : false" 
           type="checkbox" id="inlineCheckbox1"> 
           <label class="form-check-label" for="inlineCheckbox1">Admin</label>
         </div>
         <div class="form-check form-check-inline">
-          <input (change)="onCheckBoxChange($event, 'Observer')" 
+          <input required (change)="onCheckBoxChange($event, 'Observer')" name="roles"
           class="form-check-input" [checked]="user.roles.indexOf('Observer') > -1 ? true : false" 
           type="checkbox" id="inlineCheckbox2"> 
           <label class="form-check-label" for="inlineCheckbox2">Observer</label>
         </div>
         <div class="form-check form-check-inline">
-          <input (change)="onCheckBoxChange($event, 'Creator')" 
+          <input required (change)="onCheckBoxChange($event, 'Creator')" name="roles"
           class="form-check-input" [checked]="user.roles.indexOf('Creator') > -1 ? true : false" 
-          type="checkbox" id="inlineCheckbox3">
+          type="checkbox" id="inlineCheckbox3"> 
           <label class="form-check-label" for="inlineCheckbox3">Creator</label>
         </div>
         <div class="form-check form-check-inline">
-          <input (change)="onCheckBoxChange($event, 'Modifier')" 
+          <input required (change)="onCheckBoxChange($event, 'Modifier')" name="roles"
           class="form-check-input" [checked]="user.roles.indexOf('Modifier') > -1 ? true : false"
           type="checkbox" id="inlineCheckbox4"> 
           <label class="form-check-label" for="inlineCheckbox4">Modifier</label>
         </div>
       </div>
+      <div class="text-danger" *ngIf="rolesError">
+          At least one role must be selected.
+      </div>
     </div>
-    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="submit" [disabled]="rolesError || !editUserForm.valid" class="btn btn-primary">Update</button>
     <button type="submit" data-toggle="modal" data-target="#deleteUserModal" class="btn btn-danger float-right">Delete User</button>
     <div class="modal fade" id="deleteUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -80,4 +83,4 @@
   </form>
 </div>
 
-generated form value: {{ user | json }}
+{{ user | json }}
