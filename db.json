@@ -74,6 +74,17 @@
         "Observer"
       ],
       "id": 7
+    },
+    {
+      "name": "Ruth Zerizghi",
+      "email": "meron93@berkeley.edu",
+      "login": "rzerizghi",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator"
+      ],
+      "id": 8
     }
   ]
 }

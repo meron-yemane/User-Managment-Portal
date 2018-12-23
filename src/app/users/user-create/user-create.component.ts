@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'models/user';
 import { UserService } from 'src/app/user.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-create',
@@ -16,14 +17,20 @@ export class UserCreateComponent implements OnInit {
   };
   rolesError: Boolean = true;
   rolesTouched: Boolean = false;
-  constructor(private userService: UserService) { }
+  showSuccessAlert: Boolean = false;
+  constructor(
+    private userService: UserService,
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
   }
+
+  resetRoles() {
+    this.user.roles = [];
+  }
   onCheckBoxChange(event, role) {
-    console.log(this.rolesTouched);
     this.rolesTouched = true;
-    console.log(this.rolesTouched);
     if (this.user.roles.indexOf(role) > -1) {
       this.user.roles.splice(this.user.roles.indexOf(role), 1);
     } else {
@@ -33,11 +40,17 @@ export class UserCreateComponent implements OnInit {
   }
 
   processUserCreateForm() {
-    this.userService.createUser(this.user).subscribe(
-      (data: User) => {
-        console.log(data);
-      }
-    );
+    this.userService
+    .createUser(this.user)
+    .subscribe(us => {
+      console.log(us);
+      this.showSuccessAlert = true;
+      console.log('askfljadslkfadsjflkas');
+      setTimeout( () => {
+        this.showSuccessAlert = false;
+      });
+    });
   }
+
 
 }
