@@ -85,6 +85,200 @@
         "Creator"
       ],
       "id": 8
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [],
+      "id": 9
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [],
+      "id": 10
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer"
+      ],
+      "id": 11
+    },
+    {
+      "name": "Meron Yemanekljkl",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer"
+      ],
+      "id": 12
+    },
+    {
+      "name": "Meron Yemanelkjkljkl;j;lj;lj;ljl;kjkl;j",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator"
+      ],
+      "id": 13
+    },
+    {
+      "name": "User check",
+      "email": "meronyemane18@gmail.com",
+      "login": "asdf",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator",
+        "Modifier"
+      ],
+      "id": 14
+    },
+    {
+      "name": "Ruth Zerizghi",
+      "email": "meronyemane18@gmail.com",
+      "login": "df",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator",
+        "Modifier"
+      ],
+      "id": 15
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator"
+      ],
+      "id": 16
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator"
+      ],
+      "id": 17
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator"
+      ],
+      "id": 18
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator"
+      ],
+      "id": 19
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin"
+      ],
+      "id": 20
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator"
+      ],
+      "id": 21
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer"
+      ],
+      "id": 22
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer"
+      ],
+      "id": 23
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator"
+      ],
+      "id": 24
+    },
+    {
+      "name": "Ruth Zerizghi",
+      "email": "meronyemane18@gmail.com",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer"
+      ],
+      "id": 25
+    },
+    {
+      "name": "Ruth Zerizghi",
+      "email": "meronyemane18@gmail.com",
+      "login": "meron_y",
+      "roles": [
+        "Admin"
+      ],
+      "id": 26
+    },
+    {
+      "name": "Meron Yemane",
+      "email": "meron93@berkeley.edu",
+      "login": "meron_y",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator"
+      ],
+      "id": 27
     }
   ]
 }

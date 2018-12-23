@@ -1,6 +1,6 @@
 <div class="container w-50 pt-4 pb-4">
   <h1 class="text-center">Create User</h1>
-  <form #createUserForm="ngForm" (ngSubmit)="processUserCreateForm(user)">
+  <form #createUserForm="ngForm" (ngSubmit)="processUserCreateForm(createUserForm)">
     <div class="form-group">
       <label class="control-label" for="name">Name</label>
       <input minlength="3" required class="form-control" type="text" name="name" id="name" [(ngModel)]="user.name" #nameVariable="ngModel">
@@ -50,11 +50,9 @@
           At least one role must be selected.
       </div>
     </div>
-    <button [disabled]="rolesError || !createUserForm.valid" type="submit" class="btn btn-primary" (click)="createUserForm.reset()" (click)="resetRoles()">Save</button>
-    <div *ngIf="showSuccessAlert" class="alert alert-success" role="alert">
+    <button [disabled]="rolesError || !createUserForm.valid" type="submit" class="btn btn-primary">Save</button>
+    <div *ngIf="showSuccessAlert" class="alert alert-success fade show" role="alert">
       User Successfully Created
     </div>
   </form>
 </div>
-
-{{user | json}}

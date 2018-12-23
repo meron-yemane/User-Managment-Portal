@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { User } from 'models/user';
-import { UserService } from 'src/app/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CreateUserService } from '../create-user.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-user-create',
@@ -19,7 +20,8 @@ export class UserCreateComponent implements OnInit {
   rolesTouched: Boolean = false;
   showSuccessAlert: Boolean = false;
   constructor(
-    private userService: UserService,
+    private zone: NgZone,
+    private createUserService: CreateUserService,
     private route: ActivatedRoute,
     private router: Router) { }
 
@@ -39,18 +41,24 @@ export class UserCreateComponent implements OnInit {
     this.rolesError = this.user.roles.length > 0 ? false : true;
   }
 
-  processUserCreateForm() {
-    this.userService
-    .createUser(this.user)
-    .subscribe(us => {
-      console.log(us);
-      this.showSuccessAlert = true;
-      console.log('askfljadslkfadsjflkas');
-      setTimeout( () => {
-        this.showSuccessAlert = false;
-      });
-    });
-  }
+  processUserCreateForm(form: NgForm) {
+    this.createUserService.createUser(this.user)
+    .subscribe(
+      x => console.log('Observable got a next value of: ' + x),
+      err => console.error('Observable got an error: ' + err),
+      () => {
+        form.reset();
+        this.resetRoles();
+        this.zone.run(() => {
+          this.showSuccessAlert = true;
 
+          console.log('success?', this.showSuccessAlert);
+          setTimeout( () => {
+            this.showSuccessAlert = false;
+            console.log(this.showSuccessAlert);
+          }, 5000);
+        });
+        });
+    }
 
 }
