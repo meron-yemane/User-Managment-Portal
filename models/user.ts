@@ -3,5 +3,6 @@ export class User {
   email: string;
   login: string;
   roles;
+  isActive: string;
 
 }

@@ -8,9 +8,27 @@ import { UserService } from '../../user.service';
 })
 export class UserListComponent implements OnInit {
   users;
+  result;
+  allUsers;
+
   constructor(private userService: UserService) { }
 
+  activeUsers = function(obj) {
+    const result = [];
+    console.log(obj);
+    let user;
+    for (user = 0; user < obj.length; user++) {
+      if (obj[user].isActive === 'true') {
+        result.push(obj[user]);
+      }
+    }
+    console.log(result);
+    return result;
+  };
+
   ngOnInit() {
-    this.users = this.userService.getUsers();
+    this.userService.getUsers().subscribe(
+      allUsers => this.users = this.activeUsers(allUsers)
+    );
   }
 }
