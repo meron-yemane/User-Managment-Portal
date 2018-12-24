@@ -18,8 +18,6 @@ export class CreateUserService {
   constructor(private http: HttpClient) {}
 
   createUser(user: User): Observable<User> {
-    console.log('creating user');
-    console.log(user);
     return this.http.post<User>(`${this.apiUrl}`, user, this.httpOptions);
   }
 

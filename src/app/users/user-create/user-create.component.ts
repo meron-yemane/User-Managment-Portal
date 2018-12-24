@@ -14,7 +14,8 @@ export class UserCreateComponent implements OnInit {
     name: null,
     email: null,
     login: null,
-    roles: []
+    roles: [],
+    isActive: 'true'
   };
   rolesError: Boolean = true;
   rolesTouched: Boolean = false;

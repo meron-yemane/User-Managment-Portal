@@ -13,7 +13,8 @@ export class UserEditComponent implements OnInit {
     name: null,
     email: null,
     login: null,
-    roles: []
+    roles: [],
+    isActive: 'true'
   };
   rolesError: Boolean = false;
   constructor(

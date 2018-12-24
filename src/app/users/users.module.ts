@@ -9,6 +9,7 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 import { UserCreateComponent } from './user-create/user-create.component';
 import { CreateUserService } from './create-user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DeleteUserService } from './delete-user.service';
 
 @NgModule({
   declarations: [UserListComponent, UserSingleComponent, UserEditComponent, UserCreateComponent],
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    CreateUserService
+    CreateUserService,
+    DeleteUserService
   ]
 })
 export class UsersModule { }
