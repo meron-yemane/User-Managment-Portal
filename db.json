@@ -245,12 +245,11 @@
       "id": 22
     },
     {
-      "name": "Meron Yemane",
+      "name": "Meron yeeeeee",
       "email": "meron93@berkeley.edu",
       "login": "meron_y",
       "roles": [
-        "Admin",
-        "Observer"
+        "Admin"
       ],
       "isActive": "true",
       "id": 23

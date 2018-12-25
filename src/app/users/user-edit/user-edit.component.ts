@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/user.service';
 import { User } from 'models/user';
@@ -19,7 +19,9 @@ export class UserEditComponent implements OnInit {
     isActive: 'true'
   };
   rolesError: Boolean = false;
+  showSuccessAlert: Boolean = false;
   constructor(
+    private zone: NgZone,
     private route: ActivatedRoute,
     private userService: UserService,
     private deleteUserService: DeleteUserService,
@@ -45,9 +47,18 @@ export class UserEditComponent implements OnInit {
   }
 
   processUserEditForm() {
-    this.route.params.subscribe(params => {
-      const userIdForEdit = params['userid'];
-      this.editUserService.editUser(userIdForEdit, this.user);
+    this.editUserService.editUser(this.user).subscribe({
+      next: x => console.log('Observers next value: ' + x),
+      error: err => console.log(err),
+      complete: () => {
+        this.zone.run(() => {
+        this.showSuccessAlert = true;
+        setTimeout( () => {
+          this.showSuccessAlert = false;
+          console.log(this.showSuccessAlert);
+        }, 5000);
+      });
+      }
     });
   }
 

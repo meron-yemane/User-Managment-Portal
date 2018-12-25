@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +17,9 @@ export class EditUserService {
     private http: HttpClient
   ) { }
 
-editUser(userId: number, user: Object) {
-  console.log(userId);
-  console.log(user);
-}
+  editUser(user: Object): Observable<Object> {
+    console.log(user);
+    return this.http.put<Object>(`${this.apiUrl}` + user.id, user, this.httpOptions);
+  }
 
 }
