@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/user.service';
 import { User } from 'models/user';
+import { DeleteUserService } from '../delete-user.service';
 
 @Component({
   selector: 'app-user-edit',
@@ -19,7 +20,9 @@ export class UserEditComponent implements OnInit {
   rolesError: Boolean = false;
   constructor(
     private route: ActivatedRoute,
-    private userService: UserService
+    private userService: UserService,
+    private deleteUserService: DeleteUserService,
+    private renderer: Renderer2
   ) { }
 
   ngOnInit() {
@@ -41,7 +44,12 @@ export class UserEditComponent implements OnInit {
   }
 
   processUserEditForm() {
-    const allInfo = `My name is ${this.user.name}. My email is ${this.user.email}.`;
-    alert(allInfo);
+  }
+
+  processDeleteUser() {
+    this.route.params.subscribe(params => {
+      const userIdForDeletion = params['userid'];
+      this.deleteUserService.deleteUser(userIdForDeletion);
+    });
   }
 }

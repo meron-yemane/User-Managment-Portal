@@ -15,14 +15,12 @@ export class UserListComponent implements OnInit {
 
   activeUsers = function(obj) {
     const result = [];
-    console.log(obj);
     let user;
     for (user = 0; user < obj.length; user++) {
       if (obj[user].isActive === 'true') {
         result.push(obj[user]);
       }
     }
-    console.log(result);
     return result;
   };
 
