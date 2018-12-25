@@ -1,8 +1,9 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/user.service';
 import { User } from 'models/user';
 import { DeleteUserService } from '../delete-user.service';
+import { EditUserService } from '../edit-user.service';
 
 @Component({
   selector: 'app-user-edit',
@@ -22,7 +23,7 @@ export class UserEditComponent implements OnInit {
     private route: ActivatedRoute,
     private userService: UserService,
     private deleteUserService: DeleteUserService,
-    private renderer: Renderer2
+    private editUserService: EditUserService,
   ) { }
 
   ngOnInit() {
@@ -44,6 +45,10 @@ export class UserEditComponent implements OnInit {
   }
 
   processUserEditForm() {
+    this.route.params.subscribe(params => {
+      const userIdForEdit = params['userid'];
+      this.editUserService.editUser(userIdForEdit, this.user);
+    });
   }
 
   processDeleteUser() {
