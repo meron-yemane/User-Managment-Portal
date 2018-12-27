@@ -268,5 +268,32 @@
       "isActive": "false",
       "id": 28
     }
+  ],
+  "roles": [
+    {
+      "id": 0,
+      "name": "Admin",
+      "permissions": ["ReadRoles", "ReadUsers", "CreateRole", "CreateUser", "UpdateRole", "UpdateUser", "DeleteRole", "DeleteUser", "UnarchiveRole", "UnarchiveUser"],
+      "isActive": "true"
+    },
+    {
+      "id": 0,
+      "name": "Observer",
+      "permissions": ["ReadRoles", "ReadUsers"],
+      "isActive": "true"
+    },
+    {
+      "id": 0,
+      "name": "Creator",
+      "permissions": ["ReadRoles", "ReadUsers", "CreateRole", "CreateUser"],
+      "isActive": "true"
+    },
+    {
+      "id": 0,
+      "name": "Modifier",
+      "permissions": ["ReadRoles", "ReadUsers", "CreateRole", "CreateUser", "UpdateRole", "UpdateUser"],
+      "isActive": "true"
+    }
   ]
+  
 }
