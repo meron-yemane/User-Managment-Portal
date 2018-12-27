@@ -245,13 +245,7 @@
       "id": 22
     },
     {
-      "name": "Meron yeeeeee",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [
-        "Admin"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 23
     },
     {

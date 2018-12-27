@@ -55,7 +55,6 @@ export class UserEditComponent implements OnInit {
         this.showSuccessAlert = true;
         setTimeout( () => {
           this.showSuccessAlert = false;
-          console.log(this.showSuccessAlert);
         }, 5000);
       });
       }

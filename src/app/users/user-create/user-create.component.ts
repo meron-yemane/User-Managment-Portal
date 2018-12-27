@@ -52,11 +52,8 @@ export class UserCreateComponent implements OnInit {
         this.resetRoles();
         this.zone.run(() => {
           this.showSuccessAlert = true;
-
-          console.log('success?', this.showSuccessAlert);
           setTimeout( () => {
             this.showSuccessAlert = false;
-            console.log(this.showSuccessAlert);
           }, 5000);
         });
         });
