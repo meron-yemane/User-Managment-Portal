@@ -9,8 +9,14 @@
     <!-- loop over our roles and give them each a card -->
     <div class="col-6 col-sm-4" *ngFor="let role of roles">
       <div class="card order-secondary mb-3 shadow p-3 mb-5 bg-white rounded">
-        <div class="card-title">
+        <div class="card-title text-center">
           {{ role.name }}
+        </div>
+        <div class="pb-2">Permissions:</div>
+        <div class="row pl-3">
+          <div *ngFor="let permission of role.permissions">
+            <h6 class="column">{{ permission }},&nbsp;</h6>
+          </div>
         </div>
         <div>
             <button type="submit" data-toggle="modal" data-target="#deleteRoleModal" class="btn btn-danger float-right">Delete</button>

@@ -277,19 +277,19 @@
       "isActive": "true"
     },
     {
-      "id": 0,
+      "id": 1,
       "name": "Observer",
       "permissions": ["ReadRoles", "ReadUsers"],
       "isActive": "true"
     },
     {
-      "id": 0,
+      "id": 2,
       "name": "Creator",
       "permissions": ["ReadRoles", "ReadUsers", "CreateRole", "CreateUser"],
       "isActive": "true"
     },
     {
-      "id": 0,
+      "id": 3,
       "name": "Modifier",
       "permissions": ["ReadRoles", "ReadUsers", "CreateRole", "CreateUser", "UpdateRole", "UpdateUser"],
       "isActive": "true"

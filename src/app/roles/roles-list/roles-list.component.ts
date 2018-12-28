@@ -8,7 +8,6 @@ import { GetRolesService } from '../get-roles.service';
 })
 export class RolesListComponent implements OnInit {
   roles;
-
   constructor(private getRolesService: GetRolesService) { }
 
   activeRoles = function(obj) {
