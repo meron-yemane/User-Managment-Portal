@@ -4,5 +4,5 @@ export class User {
   login: string;
   roles;
   isActive: string;
-
+  id: string;
 }

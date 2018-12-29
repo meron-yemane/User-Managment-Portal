@@ -15,7 +15,9 @@
       "name": "Meron Yemane",
       "email": "myemane@augmedix.com",
       "roles": [
-        "Observer"
+        "Observer",
+        "Admin",
+        "Creator"
       ],
       "isActive": "true",
       "id": 1
@@ -273,27 +275,52 @@
     {
       "id": 0,
       "name": "Admin",
-      "permissions": ["ReadRoles", "ReadUsers", "CreateRole", "CreateUser", "UpdateRole", "UpdateUser", "DeleteRole", "DeleteUser", "UnarchiveRole", "UnarchiveUser"],
+      "permissions": [
+        "ReadRoles",
+        "ReadUsers",
+        "CreateRole",
+        "CreateUser",
+        "UpdateRole",
+        "UpdateUser",
+        "DeleteRole",
+        "DeleteUser",
+        "UnarchiveRole",
+        "UnarchiveUser"
+      ],
       "isActive": "true"
     },
     {
       "id": 1,
       "name": "Observer",
-      "permissions": ["ReadRoles", "ReadUsers"],
+      "permissions": [
+        "ReadRoles",
+        "ReadUsers"
+      ],
       "isActive": "true"
     },
     {
       "id": 2,
       "name": "Creator",
-      "permissions": ["ReadRoles", "ReadUsers", "CreateRole", "CreateUser"],
+      "permissions": [
+        "ReadRoles",
+        "ReadUsers",
+        "CreateRole",
+        "CreateUser"
+      ],
       "isActive": "true"
     },
     {
       "id": 3,
       "name": "Modifier",
-      "permissions": ["ReadRoles", "ReadUsers", "CreateRole", "CreateUser", "UpdateRole", "UpdateUser"],
+      "permissions": [
+        "ReadRoles",
+        "ReadUsers",
+        "CreateRole",
+        "CreateUser",
+        "UpdateRole",
+        "UpdateUser"
+      ],
       "isActive": "true"
     }
   ]
-  
 }

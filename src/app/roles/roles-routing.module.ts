@@ -10,12 +10,12 @@ const routes: Routes = [
     component: RolesListComponent
   },
   {
-    path: ':role',
-    component: RolesSingleComponent
-  },
-  {
     path: 'create',
     component: CreateRoleComponent
+  },
+  {
+    path: ':role',
+    component: RolesSingleComponent
   }
 ];
 
