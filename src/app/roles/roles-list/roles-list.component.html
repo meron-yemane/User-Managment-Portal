@@ -14,9 +14,7 @@
         </div>
         <div class="pb-2">Permissions:</div>
         <div class="row pl-3">
-          <div *ngFor="let permission of role.permissions">
-            <h6 class="column">{{ permission }},&nbsp;</h6>
-          </div>
+          <h6>{{ role.permissions.toString().split(',').join(', ') }}</h6>
         </div>
         <div>
             <button type="submit" class="btn btn-primary">Update</button>

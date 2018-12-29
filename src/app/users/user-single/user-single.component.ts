@@ -9,6 +9,7 @@ import { UserService } from 'src/app/user.service';
 })
 export class UserSingleComponent implements OnInit {
   user;
+  roles;
   constructor(
     private route: ActivatedRoute,
     private userService: UserService
@@ -19,7 +20,10 @@ export class UserSingleComponent implements OnInit {
       const userId = params['userid'];
       this.userService
         .getUsers()
-        .subscribe(users => this.user = users[userId]);
+        .subscribe((users) => {
+          this.user = users[userId];
+          this.roles = this.user.roles.toString().replace(/,/g, ', ');
+        });
     });
   }
 }

@@ -22,9 +22,10 @@ export class RolesListComponent implements OnInit {
   };
 
   ngOnInit() {
-    this.getRolesService.getRoles().subscribe(
-      allRoles => this.roles = this.activeRoles(allRoles)
-    );
+    this.getRolesService.getRoles()
+    .subscribe((allRoles) => {
+      this.roles = this.activeRoles(allRoles);
+    });
   }
 
 }
