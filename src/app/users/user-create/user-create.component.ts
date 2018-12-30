@@ -3,6 +3,7 @@ import { User } from 'models/user';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CreateUserService } from '../create-user.service';
 import { NgForm } from '@angular/forms';
+import { GetRolesService } from 'src/app/roles/get-roles.service';
 
 @Component({
   selector: 'app-user-create',
@@ -18,16 +19,23 @@ export class UserCreateComponent implements OnInit {
     isActive: 'true',
     id: null
   };
+  roles: {};
   rolesError: Boolean = true;
   rolesTouched: Boolean = false;
   showSuccessAlert: Boolean = false;
   constructor(
     private zone: NgZone,
     private createUserService: CreateUserService,
+    private getRolesService: GetRolesService,
     private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit() {
+    this.getRolesService.getRoles()
+      .subscribe((roles) => {
+        console.log(roles);
+        this.roles = roles;
+    });
   }
 
   resetRoles() {

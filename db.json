@@ -269,6 +269,20 @@
     {
       "isActive": "false",
       "id": 28
+    },
+    {
+      "name": "Role check",
+      "email": "meron93@berkeley.edu",
+      "login": "wycat",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator",
+        "Modifier",
+        "Manager"
+      ],
+      "isActive": "true",
+      "id": 29
     }
   ],
   "roles": [
@@ -321,6 +335,17 @@
         "UpdateUser"
       ],
       "isActive": "true"
+    },
+    {
+      "name": "Manager",
+      "permissions": [
+        "ReadRoles",
+        "ReadUsers",
+        "UpdateUser",
+        "UpdateRole"
+      ],
+      "isActive": "true",
+      "id": 4
     }
   ]
 }
