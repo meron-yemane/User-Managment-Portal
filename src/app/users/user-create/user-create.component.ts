@@ -33,7 +33,6 @@ export class UserCreateComponent implements OnInit {
   ngOnInit() {
     this.getRolesService.getRoles()
       .subscribe((roles) => {
-        console.log(roles);
         this.roles = roles;
     });
   }
