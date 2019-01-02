@@ -1,3 +1,88 @@
-<p>
-  roles-single works!
-</p>
+<div class="container w-50 pt-4 pb-4">
+    <h1 class="text-center">Edit Role</h1>
+    <form #editRoleForm="ngForm" (ngSubmit)="processRoleEditForm()">
+  
+      <!-- name -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input minlength="3" required class="form-control" id="name" type="text" value="{{ role.name }}" name="name" [(ngModel)]="role.name" #nameVariable="ngModel">
+        <div class="text-danger" *ngIf="nameVariable.invalid && nameVariable.dirty">
+            Name is required and needs to be at least 3 characters long.
+        </div>
+      </div>
+  
+      <!-- permissions -->
+      <div class="form-group">
+        <label for="permissionsLabel">Permissions</label>
+        <div id="permissionsLabel" class="form-control">
+          <div class="form-check">
+            <input required (change)="onCheckBoxChange($event, 'ReadRoles')" name="permissions" 
+            class="form-check-input" [checked]="role.permissions.indexOf('ReadRoles') > -1 ? true : false" 
+            type="checkbox" id="inlineCheckbox1"> 
+            <label class="form-check-label" for="inlineCheckbox1">ReadRoles</label>
+          </div>
+          <div class="form-check">
+            <input required (change)="onCheckBoxChange($event, 'ReadUsers')" name="permissions"
+            class="form-check-input" [checked]="role.permissions.indexOf('ReadUsers') > -1 ? true : false" 
+            type="checkbox" id="inlineCheckbox2"> 
+            <label class="form-check-label" for="inlineCheckbox2">ReadUsers</label>
+          </div>
+          <div class="form-check">
+            <input required (change)="onCheckBoxChange($event, 'CreateRole')" name="permissions"
+            class="form-check-input" [checked]="role.permissions.indexOf('CreateRole') > -1 ? true : false" 
+            type="checkbox" id="inlineCheckbox3"> 
+            <label class="form-check-label" for="inlineCheckbox3">CreateRole</label>
+          </div>
+          <div class="form-check">
+            <input required (change)="onCheckBoxChange($event, 'CreateUser')" name="permissions"
+            class="form-check-input" [checked]="role.permissions.indexOf('CreateUser') > -1 ? true : false"
+            type="checkbox" id="inlineCheckbox4"> 
+            <label class="form-check-label" for="inlineCheckbox4">CreateUser</label>
+          </div>
+          <div class="form-check">
+            <input required (change)="onCheckBoxChange($event, 'UpdateRole')" name="permissions"
+            class="form-check-input" [checked]="role.permissions.indexOf('UpdateRole') > -1 ? true : false"
+            type="checkbox" id="inlineCheckbox5"> 
+            <label class="form-check-label" for="inlineCheckbox5">UpdateRole</label>
+          </div>
+          <div class="form-check">
+            <input required (change)="onCheckBoxChange($event, 'UpdateUser')" name="permissions"
+            class="form-check-input" [checked]="role.permissions.indexOf('UpdateUser') > -1 ? true : false"
+            type="checkbox" id="inlineCheckbox6"> 
+            <label class="form-check-label" for="inlineCheckbox6">UpdateUser</label>
+          </div>
+          <div class="form-check">
+            <input required (change)="onCheckBoxChange($event, 'DeleteRole')" name="permissions"
+            class="form-check-input" [checked]="role.permissions.indexOf('DeleteRole') > -1 ? true : false"
+            type="checkbox" id="inlineCheckbox7"> 
+            <label class="form-check-label" for="inlineCheckbox7">DeleteRole</label>
+          </div>
+          <div class="form-check">
+            <input required (change)="onCheckBoxChange($event, 'DeleteUser')" name="permissions"
+            class="form-check-input" [checked]="role.permissions.indexOf('DeleteUser') > -1 ? true : false"
+            type="checkbox" id="inlineCheckbox8"> 
+            <label class="form-check-label" for="inlineCheckbox8">DeleteUser</label>
+          </div>
+          <div class="form-check">
+            <input required (change)="onCheckBoxChange($event, 'UnarchiveRole')" name="permissions"
+            class="form-check-input" [checked]="role.permissions.indexOf('UnarchiveRole') > -1 ? true : false"
+            type="checkbox" id="inlineCheckbox9"> 
+            <label class="form-check-label" for="inlineCheckbox9">UnarchiveRole</label>
+          </div>
+          <div class="form-check">
+            <input required (change)="onCheckBoxChange($event, 'UnarchiveUser')" name="permissions"
+            class="form-check-input" [checked]="role.permissions.indexOf('UnarchiveUser') > -1 ? true : false"
+            type="checkbox" id="inlineCheckbox10"> 
+            <label class="form-check-label" for="inlineCheckbox10">UnarchiveUser</label>
+          </div>
+        </div>
+        <div class="text-danger" *ngIf="permissionsError">
+            At least one role must be selected.
+        </div>
+      </div>
+      <button type="submit" [disabled]="permissionsError || !editRoleForm.valid" class="btn btn-primary">Update</button>
+      <div *ngIf="showSuccessAlert" class="alert alert-success fade show" role="alert">
+          Role Successfully Updated
+      </div>
+    </form>
+  </div>

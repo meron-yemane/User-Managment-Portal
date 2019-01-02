@@ -347,5 +347,6 @@
       "isActive": "true",
       "id": 4
     }
-  ]
+  ],
+  "permissions": ["ReadRoles", "ReadUsers", "CreateRole", "CreateUser", "UpdateRole", "UpdateUser", "DeleteRole", "DeleteUser", "UnarchiveRole", "UnarchiveUser"]
 }
