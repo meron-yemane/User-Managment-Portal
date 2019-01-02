@@ -38,7 +38,8 @@
       "email": "mhabteab@augmedix.com",
       "roles": [
         "Modifier",
-        "Observer"
+        "Observer",
+        "Admin"
       ],
       "isActive": "true",
       "id": 3

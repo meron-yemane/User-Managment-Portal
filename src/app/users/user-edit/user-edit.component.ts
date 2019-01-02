@@ -4,6 +4,7 @@ import { UserService } from 'src/app/user.service';
 import { User } from 'models/user';
 import { DeleteUserService } from '../delete-user.service';
 import { EditUserService } from '../edit-user.service';
+import { GetRolesService } from 'src/app/roles/get-roles.service';
 
 @Component({
   selector: 'app-user-edit',
@@ -19,6 +20,7 @@ export class UserEditComponent implements OnInit {
     isActive: 'true',
     id: null
   };
+  roles: {};
   rolesError: Boolean = false;
   showSuccessAlert: Boolean = false;
   constructor(
@@ -27,6 +29,7 @@ export class UserEditComponent implements OnInit {
     private userService: UserService,
     private deleteUserService: DeleteUserService,
     private editUserService: EditUserService,
+    private getRolesService: GetRolesService
   ) { }
 
   ngOnInit() {
@@ -34,7 +37,13 @@ export class UserEditComponent implements OnInit {
       const userId = params['userid'];
       this.userService
         .getUsers()
-        .subscribe(users => this.user = users[userId]);
+        .subscribe(
+          users => this.user = users[userId],
+          err => console.log(err),
+          () => {
+            this.roles = this.getRolesService.getRoles();
+          }
+          );
     });
   }
 
