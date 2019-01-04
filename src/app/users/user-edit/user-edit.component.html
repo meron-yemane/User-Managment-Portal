@@ -48,7 +48,7 @@
         </div>
       </div>
       <button type="submit" [disabled]="rolesError || !editUserForm.valid" class="btn btn-primary">Update</button>
-      <button type="button" data-toggle="modal" data-target="#deleteUserModal" class="btn btn-danger float-right">Delete User</button>
+      <button type="button" data-toggle="modal" data-target="#deleteUserModal" class="btn btn-danger" id="delete-user-button">Delete User</button>
       <div *ngIf="showSuccessAlert" class="alert alert-success fade show" role="alert">
           User Successfully Updated
       </div>
