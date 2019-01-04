@@ -191,9 +191,7 @@
       "roles": [
         "Admin",
         "Observer",
-        "Creator",
-        "Modifier",
-        "Manager"
+        "Creator"
       ],
       "isActive": "true",
       "id": 29
@@ -256,10 +254,44 @@
         "ReadRoles",
         "ReadUsers",
         "UpdateUser",
+        "UpdateRole",
+        "DeleteUser"
+      ],
+      "isActive": "false",
+      "id": 4
+    },
+    {
+      "name": "Managers",
+      "permissions": [
+        "ReadRoles",
+        "ReadUsers",
+        "DeleteUser",
+        "UpdateRole",
+        "UnarchiveUser"
+      ],
+      "isActive": "false",
+      "id": 5
+    },
+    {
+      "name": "Managers2",
+      "permissions": [
+        "ReadRoles",
+        "ReadUsers",
         "UpdateRole"
       ],
-      "isActive": "true",
-      "id": 4
+      "isActive": "false",
+      "id": 6
+    },
+    {
+      "name": "Managers3",
+      "permissions": [
+        "ReadRoles",
+        "UpdateRole",
+        "UnarchiveUser",
+        "DeleteUser"
+      ],
+      "isActive": "false",
+      "id": 7
     }
   ],
   "permissions": [

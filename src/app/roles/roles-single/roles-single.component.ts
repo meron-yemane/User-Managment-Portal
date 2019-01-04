@@ -14,7 +14,8 @@ export class RolesSingleComponent implements OnInit {
   role: Role = {
     name: null,
     permissions: [],
-    isActive: 'true'
+    isActive: 'true',
+    id: null
   };
 
   permissions: {};
@@ -53,7 +54,7 @@ export class RolesSingleComponent implements OnInit {
   }
 
   processRoleEditForm() {
-    this.editRoleService.editRole(this.role).subscribe({
+    this.editRoleService.editRole(this.role, this.role.id).subscribe({
       next: x => console.log('Observers next value: ' + x),
       error: err => console.log(err),
       complete: () => {

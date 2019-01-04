@@ -12,7 +12,8 @@ export class CreateRoleComponent implements OnInit {
   role: Role = {
     name: null,
     permissions: [],
-    isActive: 'true'
+    isActive: 'true',
+    id: null
   };
   permissionsError: Boolean = true;
   permissionsTouched: Boolean = false;

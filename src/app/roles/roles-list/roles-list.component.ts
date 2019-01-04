@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetRolesService } from '../get-roles.service';
+import { DeleteRoleService } from '../delete-role.service';
 
 @Component({
   selector: 'app-roles-list',
@@ -8,7 +9,10 @@ import { GetRolesService } from '../get-roles.service';
 })
 export class RolesListComponent implements OnInit {
   roles;
-  constructor(private getRolesService: GetRolesService) { }
+  roleIdToBeDeleted: number;
+  constructor(
+    private getRolesService: GetRolesService,
+    private deleteRoleService: DeleteRoleService    ) { }
 
   activeRoles = function(obj) {
     const result = [];
@@ -26,6 +30,25 @@ export class RolesListComponent implements OnInit {
     .subscribe((allRoles) => {
       this.roles = this.activeRoles(allRoles);
     });
+  }
+
+  updateRoleIdToBeDeleted(roleId) {
+    this.roleIdToBeDeleted = roleId;
+  }
+
+  processDeleteRole() {
+    this.deleteRoleService.deleteRole(this.roleIdToBeDeleted)
+    .subscribe({
+      next: x => console.log('Observers next value: ' + x),
+      error: err => console.log(err),
+      complete: () => {
+        this.getRolesService.getRoles()
+          .subscribe((allRoles) => {
+          this.roles = this.activeRoles(allRoles);
+        });
+      }
+    });
+
   }
 
 }

@@ -57,7 +57,7 @@ export class UserEditComponent implements OnInit {
   }
 
   processUserEditForm() {
-    this.editUserService.editUser(this.user).subscribe({
+    this.editUserService.editUser(this.user, this.user.id).subscribe({
       next: x => console.log('Observers next value: ' + x),
       error: err => console.log(err),
       complete: () => {
