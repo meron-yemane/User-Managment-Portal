@@ -38,7 +38,6 @@ export class RolesSingleComponent implements OnInit {
           err => console.log(err),
           () => {
             this.permissions = this.getPermissionsService.getPermissions();
-            console.log(this.permissions);
           }
           );
     });

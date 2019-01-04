@@ -1,23 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EditRoleService {
+export class DeleteRoleService {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json'
     })
   };
   apiUrl = 'http://localhost:3000/roles/';
-
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) { }
 
-  editRole(role: Object): Observable<Object> {
-    return this.http.put<Object>(`${this.apiUrl}` + role.id, role, this.httpOptions);
+  deleteRole(roleId: number) {
+    return this.http.put(`${this.apiUrl}` + roleId, {
+      'isActive': 'false'
+    });
   }
 }

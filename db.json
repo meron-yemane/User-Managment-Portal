@@ -76,14 +76,7 @@
       "id": 6
     },
     {
-      "name": "Meron Yemane",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [
-        "Admin",
-        "Observer"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 7
     },
     {
@@ -107,33 +100,15 @@
       "id": 9
     },
     {
-      "name": "Meron Yemane",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [],
-      "isActive": "true",
+      "isActive": "false",
       "id": 10
     },
     {
-      "name": "Meron Yemane",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [
-        "Admin",
-        "Observer"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 11
     },
     {
-      "name": "Meron Yemanekljkl",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [
-        "Admin",
-        "Observer"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 12
     },
     {
@@ -141,16 +116,7 @@
       "id": 13
     },
     {
-      "name": "User check",
-      "email": "meronyemane18@gmail.com",
-      "login": "asdf",
-      "roles": [
-        "Admin",
-        "Observer",
-        "Creator",
-        "Modifier"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 14
     },
     {
@@ -167,84 +133,31 @@
       "id": 15
     },
     {
-      "name": "Meron Yemane",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [
-        "Admin",
-        "Observer",
-        "Creator"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 16
     },
     {
-      "name": "Meron Yemane",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [
-        "Admin",
-        "Observer",
-        "Creator"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 17
     },
     {
-      "name": "Meron Yemane",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [
-        "Admin",
-        "Observer",
-        "Creator"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 18
     },
     {
-      "name": "Meron Yemane",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [
-        "Admin",
-        "Observer",
-        "Creator"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 19
     },
     {
-      "name": "Meron Yemane",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [
-        "Admin"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 20
     },
     {
-      "name": "Meron Yemane",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [
-        "Admin",
-        "Observer",
-        "Creator"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 21
     },
     {
-      "name": "Meron Yemane",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [
-        "Admin",
-        "Observer"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 22
     },
     {
