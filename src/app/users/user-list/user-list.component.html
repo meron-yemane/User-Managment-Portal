@@ -12,7 +12,7 @@
   <div class="row">
 
     <!-- loop over our users and give them each a card -->
-    <div class="col-6 col-sm-4" *ngFor="let user of users">
+    <div class="col-6 col-sm-4" *ngFor="let user of users | userFilter:searchTerm">
       <div class="card order-secondary mb-3 shadow p-3 mb-5 bg-white rounded">
         <div class="card-title">
           <a routerLink="/users/{{ user.id }}">{{ user.name }}</a>

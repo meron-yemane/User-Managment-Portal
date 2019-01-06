@@ -10,9 +10,10 @@ import { UserCreateComponent } from './user-create/user-create.component';
 import { CreateUserService } from './create-user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DeleteUserService } from './delete-user.service';
+import { UserFilterPipe } from './user-filter.pipe';
 
 @NgModule({
-  declarations: [UserListComponent, UserSingleComponent, UserEditComponent, UserCreateComponent],
+  declarations: [UserListComponent, UserSingleComponent, UserEditComponent, UserCreateComponent, UserFilterPipe],
   imports: [
     CommonModule,
     UsersRoutingModule,
