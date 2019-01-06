@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../user.service';
 import { User } from 'models/user';
+import { Angular5Csv } from 'angular5-csv/Angular5-csv';
 
 @Component({
   selector: 'app-user-list',
@@ -38,6 +39,19 @@ export class UserListComponent implements OnInit {
       }
     }
     return result;
+  };
+
+  exportData = function() {
+    const options = {
+      showLabels: true,
+      useBom: false,
+      headers: ['Name', 'Email', 'Login', 'Roles', 'isActive', 'ID']
+    };
+    const usersToExport = JSON.parse(JSON.stringify(this.users));
+    for (let user = 0; user < usersToExport.length; user++) {
+      usersToExport[user].roles = usersToExport[user].roles.toString();
+    }
+    return new Angular5Csv(usersToExport, 'Summary of Users', options);
   };
 
   ngOnInit() {

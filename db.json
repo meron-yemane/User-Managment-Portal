@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "login": "mojombo",
       "name": "Mark Delaney",
       "email": "mdelaney@augmedix.com",
+      "login": "mojombo",
       "roles": [
         "Admin"
       ],
@@ -11,9 +11,9 @@
       "id": 0
     },
     {
-      "login": "defunkt",
       "name": "Meron Yemane",
       "email": "myemane@augmedix.com",
+      "login": "defunkt",
       "roles": [
         "Observer",
         "Admin",
@@ -23,9 +23,9 @@
       "id": 1
     },
     {
-      "login": "pjhyett",
       "name": "Ryan Walker",
       "email": "rwalker@augmedix.com",
+      "login": "pjhyett",
       "roles": [
         "Creator"
       ],
@@ -33,9 +33,9 @@
       "id": 2
     },
     {
-      "login": "wycats",
       "name": "Million Habteab",
       "email": "mhabteab@augmedix.com",
+      "login": "wycats",
       "roles": [
         "Modifier",
         "Observer",
@@ -45,9 +45,9 @@
       "id": 3
     },
     {
-      "login": "ezmobius",
       "name": "Bryson Tiller",
       "email": "btiller@augmedix.com",
+      "login": "ezmobius",
       "roles": [
         "Observer"
       ],
@@ -55,9 +55,9 @@
       "id": 4
     },
     {
-      "login": "ivey",
       "name": "Kevin Kurry",
       "email": "kkurry@augmedix.com",
+      "login": "ivey",
       "roles": [
         "Observer"
       ],
@@ -65,9 +65,9 @@
       "id": 5
     },
     {
-      "login": "evanphx",
       "name": "Devin Baxter",
       "email": "dbaxter@augmedix.com",
+      "login": "evanphx",
       "roles": [
         "Modifier",
         "Observer"
@@ -92,11 +92,7 @@
       "id": 8
     },
     {
-      "name": "Meron Yemane",
-      "email": "meron93@berkeley.edu",
-      "login": "meron_y",
-      "roles": [],
-      "isActive": "true",
+      "isActive": "false",
       "id": 9
     },
     {
