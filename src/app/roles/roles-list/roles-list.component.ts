@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GetRolesService } from '../get-roles.service';
 import { DeleteRoleService } from '../delete-role.service';
+import { Role } from 'models/role';
 
 @Component({
   selector: 'app-roles-list',
@@ -10,6 +11,22 @@ import { DeleteRoleService } from '../delete-role.service';
 export class RolesListComponent implements OnInit {
   roles;
   roleIdToBeDeleted: number;
+  private _searchTerm: string;
+  get searchTerm(): string {
+    return this._searchTerm;
+  }
+  set searchTerm(value: string) {
+    this._searchTerm = value;
+    this.filteredRoles = this.filterRoles(value);
+  }
+  filteredRoles: Role[];
+
+  filterRoles(searchString: string) {
+    return this.roles.filter(role => {
+      return role.name.toLowerCase().indexOf(searchString.toLowerCase()) !== -1;
+    });
+  }
+
   constructor(
     private getRolesService: GetRolesService,
     private deleteRoleService: DeleteRoleService    ) { }
@@ -29,6 +46,7 @@ export class RolesListComponent implements OnInit {
     this.getRolesService.getRoles()
     .subscribe((allRoles) => {
       this.roles = this.activeRoles(allRoles);
+      this.filteredRoles = this.roles;
     });
   }
 
@@ -45,6 +63,7 @@ export class RolesListComponent implements OnInit {
         this.getRolesService.getRoles()
           .subscribe((allRoles) => {
           this.roles = this.activeRoles(allRoles);
+          this.filteredRoles = this.roles;
         });
       }
     });

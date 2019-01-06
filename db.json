@@ -292,6 +292,35 @@
       ],
       "isActive": "false",
       "id": 7
+    },
+    {
+      "name": "Fake role",
+      "permissions": [
+        "ReadRoles",
+        "UpdateRole",
+        "UnarchiveUser",
+        "DeleteUser",
+        "ReadUsers"
+      ],
+      "isActive": "false",
+      "id": 8
+    },
+    {
+      "name": "Fake Role23",
+      "permissions": [
+        "ReadUsers",
+        "DeleteUser",
+        "DeleteRole",
+        "UpdateUser",
+        "UpdateRole",
+        "CreateUser",
+        "CreateRole",
+        "ReadRoles",
+        "UnarchiveRole",
+        "UnarchiveUser"
+      ],
+      "isActive": "false",
+      "id": 9
     }
   ],
   "permissions": [
