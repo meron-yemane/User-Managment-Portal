@@ -10,6 +10,7 @@ export class UserListComponent implements OnInit {
   users;
   result;
   allUsers;
+  searchTerm: string;
 
   constructor(private userService: UserService) { }
 

@@ -1,9 +1,14 @@
 <div class="container mt-4 pr-4">
-    <a class="ml-auto" routerLink="/users/create">
-      <button type="button" class="btn btn-success row float-right">Create User</button>
-    </a>
+  <a class="ml-auto" routerLink="/users/create">
+    <button type="button" class="btn btn-success row float-right">Create User</button>
+  </a>
 </div>
-<div class="container pt-5">
+<div class="container">
+  <div class="form-group search-user-form">
+    <input type="text" class="form-control" placeholder="Search By Name" [(ngModel)]="searchTerm">
+  </div>
+</div>
+<div class="container">
   <div class="row">
 
     <!-- loop over our users and give them each a card -->
