@@ -195,7 +195,6 @@
   ],
   "roles": [
     {
-      "id": 0,
       "name": "Admin",
       "permissions": [
         "ReadRoles",
@@ -209,19 +208,19 @@
         "UnarchiveRole",
         "UnarchiveUser"
       ],
-      "isActive": "true"
+      "isActive": "true",
+      "id": 0
     },
     {
-      "id": 1,
       "name": "Observer",
       "permissions": [
         "ReadRoles",
         "ReadUsers"
       ],
-      "isActive": "true"
+      "isActive": "true",
+      "id": 1
     },
     {
-      "id": 2,
       "name": "Creator",
       "permissions": [
         "ReadRoles",
@@ -229,10 +228,10 @@
         "CreateRole",
         "CreateUser"
       ],
-      "isActive": "true"
+      "isActive": "true",
+      "id": 2
     },
     {
-      "id": 3,
       "name": "Modifier",
       "permissions": [
         "ReadRoles",
@@ -242,7 +241,8 @@
         "UpdateRole",
         "UpdateUser"
       ],
-      "isActive": "true"
+      "isActive": "true",
+      "id": 3
     },
     {
       "name": "Manager",
