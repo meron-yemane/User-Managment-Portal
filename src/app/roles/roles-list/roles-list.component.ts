@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GetRolesService } from '../get-roles.service';
 import { DeleteRoleService } from '../delete-role.service';
 import { Role } from 'models/role';
+import { Angular5Csv } from 'angular5-csv/Angular5-csv';
 
 @Component({
   selector: 'app-roles-list',
@@ -40,6 +41,19 @@ export class RolesListComponent implements OnInit {
       }
     }
     return result;
+  };
+
+  exportData = function() {
+    const options = {
+      showLabels: true,
+      useBom: false,
+      headers: ['Name', 'Permissions', 'isActive', 'ID']
+    };
+    const rolesToExport = JSON.parse(JSON.stringify(this.roles));
+    for (let role = 0; role < rolesToExport.length; role++) {
+      rolesToExport[role].permissions = rolesToExport[role].permissions.toString();
+    }
+    return new Angular5Csv(rolesToExport, 'Summary of Roles', options);
   };
 
   ngOnInit() {

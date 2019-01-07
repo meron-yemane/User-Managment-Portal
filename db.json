@@ -317,6 +317,18 @@
       ],
       "isActive": "false",
       "id": 9
+    },
+    {
+      "name": "Practice Role",
+      "permissions": [
+        "ReadRoles",
+        "UpdateRole",
+        "UnarchiveUser",
+        "DeleteUser",
+        "DeleteRole"
+      ],
+      "isActive": "false",
+      "id": 10
     }
   ],
   "permissions": [
