@@ -35,7 +35,7 @@
       <div class="form-group">
         <label for="roles">Roles</label>
         <div id="roles">
-          <div *ngFor="let role of roles | async">
+          <div *ngFor="let role of roles">
             <div class="form-check form-check-inline"> 
               <input (change) = "onCheckBoxChange($event, role.name)" class="form-check-input"
               type="checkbox" id="role.id" [checked]="user.roles.indexOf(role.name) > -1 ? true : false">

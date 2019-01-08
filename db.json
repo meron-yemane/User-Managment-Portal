@@ -33,15 +33,7 @@
       "id": 2
     },
     {
-      "name": "Million Habteab",
-      "email": "mhabteab@augmedix.com",
-      "login": "wycats",
-      "roles": [
-        "Modifier",
-        "Observer",
-        "Admin"
-      ],
-      "isActive": "true",
+      "isActive": "false",
       "id": 3
     },
     {
@@ -191,6 +183,18 @@
       ],
       "isActive": "true",
       "id": 29
+    },
+    {
+      "name": "Patrick",
+      "email": "patrick@gmail.com",
+      "login": "p",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator"
+      ],
+      "isActive": "true",
+      "id": 30
     }
   ],
   "roles": [
@@ -329,6 +333,16 @@
       ],
       "isActive": "false",
       "id": 10
+    },
+    {
+      "name": "MeronRole",
+      "permissions": [
+        "ReadRoles",
+        "UpdateRole",
+        "UnarchiveUser"
+      ],
+      "isActive": "false",
+      "id": 11
     }
   ],
   "permissions": [

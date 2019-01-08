@@ -32,6 +32,17 @@ export class UserEditComponent implements OnInit {
     private getRolesService: GetRolesService
   ) { }
 
+  activeRoles = function(obj) {
+    const result = [];
+    let role;
+    for (role = 0; role < obj.length; role++) {
+      if (obj[role].isActive === 'true') {
+        result.push(obj[role]);
+      }
+    }
+    return result;
+  };
+
   ngOnInit() {
     this.route.params.subscribe(params => {
       const userId = params['userid'];
@@ -41,7 +52,10 @@ export class UserEditComponent implements OnInit {
           users => this.user = users[userId],
           err => console.log(err),
           () => {
-            this.roles = this.getRolesService.getRoles();
+            this.getRolesService.getRoles()
+            .subscribe((allRoles) => {
+              this.roles = this.activeRoles(allRoles);
+            });
           }
           );
     });
