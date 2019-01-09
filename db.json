@@ -5,7 +5,8 @@
       "email": "mdelaney@augmedix.com",
       "login": "mojombo",
       "roles": [
-        "Admin"
+        "Admin",
+        "Observer"
       ],
       "isActive": "true",
       "id": 0

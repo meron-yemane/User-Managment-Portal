@@ -18,8 +18,9 @@ export class UserEditComponent implements OnInit {
     login: null,
     roles: [],
     isActive: 'true',
-    id: null
+    id: undefined
   };
+
   roles: {};
   rolesError: Boolean = false;
   showSuccessAlert: Boolean = false;
