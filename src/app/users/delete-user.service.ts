@@ -19,7 +19,7 @@ export class DeleteUserService {
     ) { }
 
   deleteUser(userId: number) {
-    return this.http.put(`${this.apiUrl}` + userId,
+    return this.http.patch(`${this.apiUrl}` + userId,
     {
       'isActive': 'false'
     })
