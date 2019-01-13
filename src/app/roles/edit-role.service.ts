@@ -17,7 +17,7 @@ export class EditRoleService {
     private http: HttpClient
   ) { }
 
-  editRole(role: Object, roleId: string): Observable<Object> {
+  editRole(role: Object, roleId: number): Observable<Object> {
     return this.http.put<Object>(`${this.apiUrl}` + roleId, role, this.httpOptions);
   }
 }

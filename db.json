@@ -344,6 +344,15 @@
       ],
       "isActive": "false",
       "id": 11
+    },
+    {
+      "name": "Meron",
+      "permissions": [
+        "UnarchiveUser",
+        "UnarchiveRole"
+      ],
+      "isActive": "false",
+      "id": 12
     }
   ],
   "permissions": [
