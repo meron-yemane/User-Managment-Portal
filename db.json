@@ -28,7 +28,8 @@
       "email": "rwalker@augmedix.com",
       "login": "pjhyett",
       "roles": [
-        "Creator"
+        "Creator",
+        "Observer"
       ],
       "isActive": "true",
       "id": 2
@@ -196,6 +197,16 @@
       ],
       "isActive": "true",
       "id": 30
+    },
+    {
+      "name": "Ruth Zerizghi",
+      "email": "meronyemane18@gmail.com",
+      "login": "meron_y",
+      "roles": [
+        "Admin"
+      ],
+      "isActive": "false",
+      "id": 31
     }
   ],
   "roles": [
@@ -353,6 +364,15 @@
       ],
       "isActive": "false",
       "id": 12
+    },
+    {
+      "name": "dfds",
+      "permissions": [
+        "ReadUsers",
+        "DeleteUser"
+      ],
+      "isActive": "false",
+      "id": 13
     }
   ],
   "permissions": [

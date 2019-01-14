@@ -30,10 +30,21 @@ export class UserCreateComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router) { }
 
+  activeRoles = function(obj) {
+    const result = [];
+    let role;
+    for (role = 0; role < obj.length; role++) {
+      if (obj[role].isActive === 'true') {
+        result.push(obj[role]);
+      }
+    }
+    return result;
+  };
+
   ngOnInit() {
     this.getRolesService.getRoles()
-      .subscribe((roles) => {
-        this.roles = roles;
+      .subscribe((allRoles) => {
+        this.roles = this.activeRoles(allRoles);
     });
   }
 
