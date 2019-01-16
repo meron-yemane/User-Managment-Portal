@@ -71,8 +71,7 @@ describe('UserListComponent', () => {
 
   it('should have currentSortOption equal to "Alphabetical Order" on initialization', () => {
     fixture.detectChanges();
-    spyOn(component, 'currentSortOption');
-    expect(currentSortOption).toEqual('Alphabetical Order');
+    expect(component.currentSortOption).toEqual('Alphabetical Order');
   });
 
   it('should create', () => {

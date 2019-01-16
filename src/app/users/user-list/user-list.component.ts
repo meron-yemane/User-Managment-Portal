@@ -9,6 +9,7 @@ import { Angular5Csv } from 'angular5-csv/Angular5-csv';
   styleUrls: ['./user-list.component.scss']
 })
 export class UserListComponent implements OnInit {
+  currentSortOption: string;
   users;
   result;
   allUsers;
@@ -59,6 +60,7 @@ export class UserListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.currentSortOption = 'Alphabetical Order';
     this.userService.getUsers().subscribe(
       allUsers => {
         this.users = this.activeUsers(allUsers);
