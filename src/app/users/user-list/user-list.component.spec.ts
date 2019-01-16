@@ -32,7 +32,7 @@ describe('UserListComponent', () => {
     const sortFormDe: DebugElement = fixture.debugElement;
     const sortFormEl: HTMLElement = sortFormDe.nativeElement;
     const sortForm = sortFormEl.querySelector('#sortForm');
-    expect(sortForm.textContent).toEqual('');
+    expect(sortForm.textContent).toContain('Sort By');
 
   });
 
