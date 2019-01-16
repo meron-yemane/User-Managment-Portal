@@ -86,6 +86,7 @@ describe('UserListComponent', () => {
       select.nativeElement.dispatchEvent(new Event('change'));
       fixture.detectChanges();
       expect(component.onSelected).toHaveBeenCalledWith('Alphabetical Order');
+      fixture.detectChanges();
       expect(component.currentSortOption).toEqual('Alphabetical Order');
     });
   });

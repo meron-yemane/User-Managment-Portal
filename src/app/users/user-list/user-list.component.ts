@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../user.service';
 import { User } from 'models/user';
 import { Angular5Csv } from 'angular5-csv/Angular5-csv';
+import { getTNode } from '@angular/core/src/render3/util';
 
 @Component({
   selector: 'app-user-list',
@@ -55,8 +56,24 @@ export class UserListComponent implements OnInit {
     return new Angular5Csv(usersToExport, 'Summary of Users', options);
   };
 
-  onSortButtonClick() {
+  compareAlphabet(a, b) {
+    const nameA: string = a.name.toUpperCase();
+    const nameB: string = b.name.toUpperCase();
 
+    let comparison = 0;
+    if (nameA > nameB) {
+      comparison = 1;
+    } else if (nameA < nameB) {
+      comparison = -1;
+    }
+
+    return comparison;
+  }
+
+  onSortButtonClick() {
+    if (this.currentSortOption === 'Alphabetical Order') {
+      return this.filteredUsers.sort(this.compareAlphabet);
+    }
   }
 
   onSelected(value: string) {
