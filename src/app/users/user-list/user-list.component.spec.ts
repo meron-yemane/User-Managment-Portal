@@ -33,7 +33,14 @@ describe('UserListComponent', () => {
     const sortFormEl: HTMLElement = sortFormDe.nativeElement;
     const sortForm = sortFormEl.querySelector('#sortForm');
     expect(sortForm.textContent).toContain('Sort By');
+  });
 
+  it ('should find select tag with fixture.debugElement.nativeElement', () => {
+    const selectDe: DebugElement = fixture.debugElement;
+    const selectEl: HTMLElement = selectDe.nativeElement;
+    const select = selectEl.querySelector('select');
+    expect(select.textContent).toContain('Alphabetical Order');
+    expect(select.textContent).toContain('Creation Date');
   });
 
   it('should find "Sort By" label with fixture.debugElement.nativeElement', () => {
