@@ -207,6 +207,18 @@
       ],
       "isActive": "false",
       "id": 31
+    },
+    {
+      "name": "Fake use",
+      "email": "meronyemane18@gmail.com",
+      "login": "asdfs",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator"
+      ],
+      "isActive": "true",
+      "id": 32
     }
   ],
   "roles": [

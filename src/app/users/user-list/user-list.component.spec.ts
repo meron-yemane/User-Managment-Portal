@@ -4,6 +4,7 @@ import { UserListComponent } from './user-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
+import { DebugElement } from '@angular/core';
 
 describe('UserListComponent', () => {
   let component: UserListComponent;
@@ -26,6 +27,19 @@ describe('UserListComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
+  it ('should find user sort form with fixture.debugElement.nativeElement', () => {
+    const sortFormDe: DebugElement = fixture.debugElement;
+    const sortFormEl: HTMLElement = sortFormDe.nativeElement;
+    const sortForm = sortFormEl.querySelector('sortForm');
+    expect(sortForm.textContent).toEqual('');
+
+  });
+
+  it('should register a click event with sort button', async(() => {
+
+
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
