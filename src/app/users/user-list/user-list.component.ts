@@ -54,6 +54,10 @@ export class UserListComponent implements OnInit {
     return new Angular5Csv(usersToExport, 'Summary of Users', options);
   };
 
+  onSortButtonClick() {
+
+  }
+
   ngOnInit() {
     this.userService.getUsers().subscribe(
       allUsers => {
