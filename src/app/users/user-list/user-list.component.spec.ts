@@ -36,6 +36,13 @@ describe('UserListComponent', () => {
 
   });
 
+  it('should find "Sort By" label with fixture.debugElement.nativeElement', () => {
+    const labelDe: DebugElement = fixture.debugElement;
+    const labelEl: HTMLElement = labelDe.nativeElement;
+    const label = labelEl.querySelector('#sortByLabel');
+    expect(label.textContent).toEqual('Sort By');
+  });
+
   it('should register a click event with sort button', async(() => {
 
 
