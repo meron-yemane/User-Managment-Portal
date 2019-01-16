@@ -86,8 +86,6 @@ describe('UserListComponent', () => {
       select.nativeElement.dispatchEvent(new Event('change'));
       fixture.detectChanges();
       expect(component.onSelected).toHaveBeenCalledWith('Alphabetical Order');
-      fixture.detectChanges();
-      expect(component.currentSortOption).toEqual('Alphabetical Order');
     });
   });
 
@@ -103,6 +101,7 @@ describe('UserListComponent', () => {
           'Observer'
         ],
         'isActive': 'true',
+        'creationDate': 1524379940,
         'id': 0
       },
       {
@@ -115,6 +114,7 @@ describe('UserListComponent', () => {
           'Creator'
         ],
         'isActive': 'true',
+        'creationDate': 1524379941,
         'id': 1
       },
       {
@@ -126,6 +126,7 @@ describe('UserListComponent', () => {
           'Observer'
         ],
         'isActive': 'true',
+        'creationDate': 1524379942,
         'id': 2
       },
       {
@@ -136,6 +137,7 @@ describe('UserListComponent', () => {
           'Observer'
         ],
         'isActive': 'true',
+        'creationDate': 1524379943,
         'id': 4
       }
     ];
@@ -154,6 +156,7 @@ describe('UserListComponent', () => {
             'Observer'
           ],
           'isActive': 'true',
+          'creationDate': 1524379943,
           'id': 4
         },
         {
@@ -165,6 +168,7 @@ describe('UserListComponent', () => {
             'Observer'
           ],
           'isActive': 'true',
+          'creationDate': 1524379940,
           'id': 0
         },
         {
@@ -177,6 +181,7 @@ describe('UserListComponent', () => {
             'Creator'
           ],
           'isActive': 'true',
+          'creationDate': 1524379941,
           'id': 1
         },
         {
@@ -188,6 +193,118 @@ describe('UserListComponent', () => {
             'Observer'
           ],
           'isActive': 'true',
+          'creationDate': 1524379942,
+          'id': 2
+        }
+      ]);
+    });
+  }));
+
+  it('should display users by date created when submit is clicked with appropriate option', async(() => {
+    component.currentSortOption = 'Creation Date';
+    component.filteredUsers = [
+      {
+        'name': 'Mark Delaney',
+        'email': 'mdelaney@augmedix.com',
+        'login': 'mojombo',
+        'roles': [
+          'Admin',
+          'Observer'
+        ],
+        'isActive': 'true',
+        'creationDate': 1524379940,
+        'id': 0
+      },
+      {
+        'name': 'Meron Yemane',
+        'email': 'myemane@augmedix.com',
+        'login': 'defunkt',
+        'roles': [
+          'Observer',
+          'Admin',
+          'Creator'
+        ],
+        'isActive': 'true',
+        'creationDate': 1524379950,
+        'id': 1
+      },
+      {
+        'name': 'Ryan Walker',
+        'email': 'rwalker@augmedix.com',
+        'login': 'pjhyett',
+        'roles': [
+          'Creator',
+          'Observer'
+        ],
+        'isActive': 'true',
+        'creationDate': 1524379930,
+        'id': 2
+      },
+      {
+        'name': 'Bryson Tiller',
+        'email': 'btiller@augmedix.com',
+        'login': 'ezmobius',
+        'roles': [
+          'Observer'
+        ],
+        'isActive': 'true',
+        'creationDate': 1524379910,
+        'id': 4
+      }
+    ];
+    const buttonDe: DebugElement = fixture.debugElement;
+    const buttonEl: HTMLElement = buttonDe.nativeElement;
+    const button: HTMLElement = buttonEl.querySelector('#sortButton');
+    button.click();
+    fixture.detectChanges();
+    fixture.whenStable().then(() => {
+      expect(component.filteredUsers).toEqual([
+        {
+          'name': 'Bryson Tiller',
+          'email': 'btiller@augmedix.com',
+          'login': 'ezmobius',
+          'roles': [
+            'Observer'
+          ],
+          'isActive': 'true',
+          'creationDate': 1524379910,
+          'id': 4
+        },
+        {
+          'name': 'Mark Delaney',
+          'email': 'mdelaney@augmedix.com',
+          'login': 'mojombo',
+          'roles': [
+            'Admin',
+            'Observer'
+          ],
+          'isActive': 'true',
+          'creationDate': 1524379940,
+          'id': 0
+        },
+        {
+          'name': 'Meron Yemane',
+          'email': 'myemane@augmedix.com',
+          'login': 'defunkt',
+          'roles': [
+            'Observer',
+            'Admin',
+            'Creator'
+          ],
+          'isActive': 'true',
+          'creationDate': 1524379950,
+          'id': 1
+        },
+        {
+          'name': 'Ryan Walker',
+          'email': 'rwalker@augmedix.com',
+          'login': 'pjhyett',
+          'roles': [
+            'Creator',
+            'Observer'
+          ],
+          'isActive': 'true',
+          'creationDate': 1524379930,
           'id': 2
         }
       ]);

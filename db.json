@@ -9,6 +9,7 @@
         "Observer"
       ],
       "isActive": "false",
+      "creationDate": 1524379940,
       "id": 0
     },
     {
@@ -21,6 +22,7 @@
         "Creator"
       ],
       "isActive": "true",
+      "creationDate": 1524379940,
       "id": 1
     },
     {
@@ -32,6 +34,7 @@
         "Observer"
       ],
       "isActive": "true",
+      "creationDate": 1524379941,
       "id": 2
     },
     {
@@ -46,6 +49,7 @@
         "Observer"
       ],
       "isActive": "true",
+      "creationDate": 1524379942,
       "id": 4
     },
     {
@@ -56,6 +60,7 @@
         "Observer"
       ],
       "isActive": "true",
+      "creationDate": 1524379943,
       "id": 5
     },
     {
@@ -67,6 +72,7 @@
         "Observer"
       ],
       "isActive": "true",
+      "creationDate": 1524379944,
       "id": 6
     },
     {
@@ -83,6 +89,7 @@
         "Creator"
       ],
       "isActive": "true",
+      "creationDate": 1524379945,
       "id": 8
     },
     {
@@ -120,6 +127,7 @@
         "Modifier"
       ],
       "isActive": "true",
+      "creationDate": 1524379946,
       "id": 15
     },
     {
@@ -184,6 +192,7 @@
         "Creator"
       ],
       "isActive": "false",
+      "creationDate": 1524379947,
       "id": 29
     },
     {
@@ -196,6 +205,7 @@
         "Creator"
       ],
       "isActive": "true",
+      "creationDate": 1524379948,
       "id": 30
     },
     {
@@ -206,6 +216,7 @@
         "Admin"
       ],
       "isActive": "false",
+      "creationDate": 1524379949,
       "id": 31
     },
     {
@@ -218,6 +229,7 @@
         "Creator"
       ],
       "isActive": "true",
+      "creationDate": 1524379950,
       "id": 32
     }
   ],
