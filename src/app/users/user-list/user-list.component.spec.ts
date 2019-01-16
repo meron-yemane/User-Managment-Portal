@@ -32,7 +32,7 @@ describe('UserListComponent', () => {
     const sortFormDe: DebugElement = fixture.debugElement;
     const sortFormEl: HTMLElement = sortFormDe.nativeElement;
     const sortForm = sortFormEl.querySelector('#sortForm');
-    expect(sortForm.textContent).toContain('Sort By');
+    expect(sortForm.textContent).toContain('Sort By:');
   });
 
   it ('should find select tag with fixture.debugElement.nativeElement', () => {
@@ -47,7 +47,14 @@ describe('UserListComponent', () => {
     const labelDe: DebugElement = fixture.debugElement;
     const labelEl: HTMLElement = labelDe.nativeElement;
     const label = labelEl.querySelector('#sortByLabel');
-    expect(label.textContent).toEqual('Sort By');
+    expect(label.textContent).toEqual('Sort By:');
+  });
+
+  it('should find submit function for sort form with fixture.debugElement.nativeElement', () => {
+    const buttonDe: DebugElement = fixture.debugElement;
+    const buttonEl: HTMLElement = buttonDe.nativeElement;
+    const button = buttonEl.querySelector('#sortButton');
+    expect(button.textContent).toEqual('Submit');
   });
 
   it('should register a click event with sort button', async(() => {
