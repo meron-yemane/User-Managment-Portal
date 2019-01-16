@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { DebugElement } from '@angular/core';
+import { By } from '@angular/platform-browser';
 
 describe('UserListComponent', () => {
   let component: UserListComponent;
@@ -72,6 +73,20 @@ describe('UserListComponent', () => {
   it('should have currentSortOption equal to "Alphabetical Order" on initialization', () => {
     fixture.detectChanges();
     expect(component.currentSortOption).toEqual('Alphabetical Order');
+  });
+
+  it('should register that currentSortOption is correctly updated when sort options are clicked', () => {
+    spyOn(component, 'onSelected');
+    spyOn(component, 'currentSortOption');
+    fixture.detectChanges();
+
+    const select = fixture.debugElement.query(By.css('select'));
+    fixture.whenStable().then(() => {
+      select.nativeElement.dispatchEvent(new Event('change'));
+      fixture.detectChanges();
+      expect(component.onSelected).toHaveBeenCalledWith('Alphabetical Order');
+      expect(component.currentSortOption).toEqual('Alphabetical Order');
+    });
   });
 
   it('should create', () => {
