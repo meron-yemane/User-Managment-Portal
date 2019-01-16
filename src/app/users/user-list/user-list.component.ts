@@ -59,6 +59,10 @@ export class UserListComponent implements OnInit {
 
   }
 
+  onSelected(value: string) {
+    this.currentSortOption = value;
+  }
+
   ngOnInit() {
     this.currentSortOption = 'Alphabetical Order';
     this.userService.getUsers().subscribe(
