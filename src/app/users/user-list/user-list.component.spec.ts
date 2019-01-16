@@ -271,6 +271,18 @@ describe('UserListComponent', () => {
           'id': 4
         },
         {
+          'name': 'Ryan Walker',
+          'email': 'rwalker@augmedix.com',
+          'login': 'pjhyett',
+          'roles': [
+            'Creator',
+            'Observer'
+          ],
+          'isActive': 'true',
+          'creationDate': 1524379930,
+          'id': 2
+        },
+        {
           'name': 'Mark Delaney',
           'email': 'mdelaney@augmedix.com',
           'login': 'mojombo',
@@ -294,18 +306,6 @@ describe('UserListComponent', () => {
           'isActive': 'true',
           'creationDate': 1524379950,
           'id': 1
-        },
-        {
-          'name': 'Ryan Walker',
-          'email': 'rwalker@augmedix.com',
-          'login': 'pjhyett',
-          'roles': [
-            'Creator',
-            'Observer'
-          ],
-          'isActive': 'true',
-          'creationDate': 1524379930,
-          'id': 2
         }
       ]);
     });

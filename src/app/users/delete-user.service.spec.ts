@@ -35,6 +35,7 @@ describe('DeleteUserService', () => {
           'Admin'
         ],
         'isActive': 'true',
+        'creationDate': 1524379940,
         'id': 0
     };
 

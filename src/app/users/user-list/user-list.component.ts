@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../user.service';
 import { User } from 'models/user';
 import { Angular5Csv } from 'angular5-csv/Angular5-csv';
-import { getTNode } from '@angular/core/src/render3/util';
 
 @Component({
   selector: 'app-user-list',
@@ -70,10 +69,27 @@ export class UserListComponent implements OnInit {
     return comparison;
   }
 
+  compareCreationDate(a, b) {
+    const creationDateA: string = a.creationDate;
+    const creationDateB: string = b.creationDate;
+
+    let comparison = 0;
+    if (creationDateA > creationDateB) {
+      comparison = 1;
+    } else if (creationDateA < creationDateB) {
+      comparison = -1;
+    }
+
+    return comparison;
+  }
+
   onSortButtonClick() {
     if (this.currentSortOption === 'Alphabetical Order') {
       return this.filteredUsers.sort(this.compareAlphabet);
+    } else if (this.currentSortOption === 'Creation Date') {
+      return this.filteredUsers.sort(this.compareCreationDate);
     }
+
   }
 
   onSelected(value: string) {

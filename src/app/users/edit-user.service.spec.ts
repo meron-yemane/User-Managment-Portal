@@ -33,6 +33,7 @@ describe('EditUserService', () => {
         'Admin'
       ],
       'isActive': 'true',
+      'creationDate': 1524379940,
       'id': 0
     };
 
@@ -45,6 +46,7 @@ describe('EditUserService', () => {
         'Creator'
       ],
       'isActive': 'true',
+      'creationDate': 1524379940,
       'id': 0
     }, exampleUser.id).subscribe(user => {
       expect(user).toEqual({
@@ -56,6 +58,7 @@ describe('EditUserService', () => {
           'Creator'
         ],
         'isActive': 'true',
+        'creationDate': 1524379940,
         'id': 0
       });
     });
@@ -71,6 +74,7 @@ describe('EditUserService', () => {
         'Creator'
       ],
       'isActive': 'true',
+      'creationDate': 1524379940,
       'id': 0
     });
   });

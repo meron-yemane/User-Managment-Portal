@@ -18,6 +18,7 @@ export class UserEditComponent implements OnInit {
     login: null,
     roles: [],
     isActive: 'true',
+    creationDate: null,
     id: undefined
   };
 

@@ -18,6 +18,7 @@ export class CreateUserService {
   constructor(private http: HttpClient) {}
 
   createUser(user: User): Observable<User> {
+    user.creationDate = new Date().getTime();
     return this.http.post<User>(`${this.apiUrl}`, user, this.httpOptions);
   }
 

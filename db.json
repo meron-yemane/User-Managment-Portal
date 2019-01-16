@@ -231,6 +231,20 @@
       "isActive": "true",
       "creationDate": 1524379950,
       "id": 32
+    },
+    {
+      "name": "Aman Yemane",
+      "email": "aman@gmail.com",
+      "login": "a_yemane",
+      "roles": [
+        "Admin",
+        "Observer",
+        "Creator",
+        "Modifier"
+      ],
+      "isActive": "true",
+      "creationDate": 1547677329393,
+      "id": 33
     }
   ],
   "roles": [
