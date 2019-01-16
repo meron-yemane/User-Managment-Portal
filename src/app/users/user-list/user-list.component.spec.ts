@@ -57,9 +57,16 @@ describe('UserListComponent', () => {
     expect(button.textContent).toEqual('Submit');
   });
 
-  it('should register a click event with sort button', async(() => {
+  it('should register a click event/call onSortButtonclick() when sort button clicked', async(() => {
+    spyOn(component, 'onSortButtonClick');
+    const buttonDe: DebugElement = fixture.debugElement;
+    const buttonEl: HTMLElement = buttonDe.nativeElement;
+    const button: HTMLElement = buttonEl.querySelector('#sortButton');
+    button.click();
 
-
+    fixture.whenStable().then(() => {
+      expect(component.onSortButtonClick).toHaveBeenCalled();
+    });
   }));
 
   it('should create', () => {
