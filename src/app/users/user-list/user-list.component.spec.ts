@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
+import { User } from 'models/user';
 
 describe('UserListComponent', () => {
   let component: UserListComponent;
@@ -88,6 +89,109 @@ describe('UserListComponent', () => {
       expect(component.currentSortOption).toEqual('Alphabetical Order');
     });
   });
+
+  it('should display users in alphabetical order when submit is clicked with appropriate option', async(() => {
+    component.currentSortOption = 'Alphabetical Order';
+    component.filteredUsers = [
+      {
+        'name': 'Mark Delaney',
+        'email': 'mdelaney@augmedix.com',
+        'login': 'mojombo',
+        'roles': [
+          'Admin',
+          'Observer'
+        ],
+        'isActive': 'true',
+        'id': 0
+      },
+      {
+        'name': 'Meron Yemane',
+        'email': 'myemane@augmedix.com',
+        'login': 'defunkt',
+        'roles': [
+          'Observer',
+          'Admin',
+          'Creator'
+        ],
+        'isActive': 'true',
+        'id': 1
+      },
+      {
+        'name': 'Ryan Walker',
+        'email': 'rwalker@augmedix.com',
+        'login': 'pjhyett',
+        'roles': [
+          'Creator',
+          'Observer'
+        ],
+        'isActive': 'true',
+        'id': 2
+      },
+      {
+        'name': 'Bryson Tiller',
+        'email': 'btiller@augmedix.com',
+        'login': 'ezmobius',
+        'roles': [
+          'Observer'
+        ],
+        'isActive': 'true',
+        'id': 4
+      }
+    ];
+    const buttonDe: DebugElement = fixture.debugElement;
+    const buttonEl: HTMLElement = buttonDe.nativeElement;
+    const button: HTMLElement = buttonEl.querySelector('#sortButton');
+    button.click();
+    fixture.detectChanges();
+    fixture.whenStable().then(() => {
+      expect(component.filteredUsers).toEqual([
+        {
+          'name': 'Bryson Tiller',
+          'email': 'btiller@augmedix.com',
+          'login': 'ezmobius',
+          'roles': [
+            'Observer'
+          ],
+          'isActive': 'true',
+          'id': 4
+        },
+        {
+          'name': 'Mark Delaney',
+          'email': 'mdelaney@augmedix.com',
+          'login': 'mojombo',
+          'roles': [
+            'Admin',
+            'Observer'
+          ],
+          'isActive': 'true',
+          'id': 0
+        },
+        {
+          'name': 'Meron Yemane',
+          'email': 'myemane@augmedix.com',
+          'login': 'defunkt',
+          'roles': [
+            'Observer',
+            'Admin',
+            'Creator'
+          ],
+          'isActive': 'true',
+          'id': 1
+        },
+        {
+          'name': 'Ryan Walker',
+          'email': 'rwalker@augmedix.com',
+          'login': 'pjhyett',
+          'roles': [
+            'Creator',
+            'Observer'
+          ],
+          'isActive': 'true',
+          'id': 2
+        }
+      ]);
+    });
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
