@@ -31,7 +31,7 @@ describe('UserListComponent', () => {
   it ('should find user sort form with fixture.debugElement.nativeElement', () => {
     const sortFormDe: DebugElement = fixture.debugElement;
     const sortFormEl: HTMLElement = sortFormDe.nativeElement;
-    const sortForm = sortFormEl.querySelector('sortForm');
+    const sortForm = sortFormEl.querySelector('#sortForm');
     expect(sortForm.textContent).toEqual('');
 
   });
